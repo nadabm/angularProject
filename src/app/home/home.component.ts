@@ -8,6 +8,7 @@ import { Component, HostListener } from '@angular/core';
 export class HomeComponent {
   isScrolled: boolean = false;
 
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.isScrolled = window.scrollY > 50; // Adjust the scroll threshold as needed
