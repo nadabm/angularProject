@@ -13,12 +13,12 @@
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a class="nav-link scrollto " href="#hero">Home</a></li>
-        <li><a class="nav-link scrollto" href="#about">About Morocco</a></li>
-        <li><a class="nav-link scrollto" href="#services">Destination</a></li>
-        <li><a class="nav-link scrollto" href="#portfolio">Recomendation</a></li>
+        <li><a [class.white-text]="isScrolled" class="nav-link scrollto"  href="#hero">Home</a></li>
+        <li><a [class.white-text]="isScrolled"  class="nav-link scrollto" href="#about">About Morocco</a></li>
+        <li><a [class.white-text]="isScrolled" class="nav-link scrollto" href="#services">Destination</a></li>
+        <li><a [class.white-text]="isScrolled" class="nav-link scrollto" href="#portfolio">Recomendation</a></li>
         <!-- <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
-        <li class="dropdown"><a href="#"><span>Matches</span> <i class="bi bi-chevron-down"></i></a>
+        <li class="dropdown"><a [class.white-text]="isScrolled" href="#"><span>Matches</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a href="#">Drop Down 1</a></li>
             <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
@@ -69,7 +69,21 @@
             </li>
           </ul>
         </li> -->
-        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            <!-- Display user's first name when authenticated -->
+<!--
+            <li *ngIf="!authService.isAuthenticated$ | async; else login">
+              <a [class.white-text]="isScrolled" class="nav-link scrollto" href="#">
+                {{ authService.userFirstName$ | async }}
+              </a>
+            </li> -->
+        <li><a [class.white-text]="isScrolled" class="nav-link scrollto" href="#contact">Contact</a></li>
+            <!-- Add login and signup buttons -->
+            <!-- <li *ngIf="!authService.isAuthenticated$ | async; else login">
+              <a [class.white-text]="isScrolled" class="nav-link scrollto" routerLink="/login">Login</a>
+            </li> -->
+            <!-- <li *ngIf="!authService.isAuthenticated$ | async; else login">
+              <a [class.white-text]="isScrolled" class="nav-link scrollto" routerLink="/signup">Signup</a>
+            </li> -->
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
@@ -141,7 +155,7 @@
   </section><!-- End About Us Section -->
 
   <!-- ======= Services Section ======= -->
-  <section id="services" class="services">
+  <!-- <section id="services" class="services">
     <div class="container">
 
       <div class="section-title" data-aos="fade-in" data-aos-delay="100">
@@ -188,19 +202,203 @@
       </div>
 
     </div>
-  </section><!-- End Services Section -->
+  </section>End Services Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+        <h2>Destination</h2>
+    <p>As the host nation for the 2030 FIFA World Cup, Morocco invites football enthusiasts and travelers alike to embark on
+      a journey through its mesmerizing host cities. Each destination offers a unique blend of cultural heritage, modern
+      amenities, and the vibrant energy of the beautiful game. From the iconic landscapes of Casablanca to the historic
+      charm of Marrakech, the bustling streets of Fes, and the coastal allure of Tangier, Morocco promises an unforgettable
+      World Cup experience. Join us in celebrating the global spirit of football against the backdrop of Morocco's rich
+      history and diverse landscapes.</p>
+
+      </div>
+
+      <div class="row" data-aos="fade-in">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-card">Card</li>
+            <li data-filter=".filter-web">Web</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row portfolio-container" data-aos="fade-up">
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/casablanca.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links">
+              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/chefchaoun.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links">
+              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/fes.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links">
+              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/kech.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links">
+              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/tangier.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links">
+              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links">
+              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links">
+              <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                title="Card 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links">
+              <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                title="Card 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+            <div class="portfolio-links">
+              <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Portfolio Section -->
 </main>
-<script>
-  window.onscroll = function () { myFunction() };
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
 
-  var header = document.getElementById("header");
-  var sticky = header.offsetTop;
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Visit Morocco</h3>
+              <p class="pb-3"><em>Embark on a Journey of Culture, History, and Soccer Excellence</em>
+              </p>
+              <p>
 
-  function myFunction() {
-    if (window.pageYOffset > sticky) {
-      header.classList.add("scroll-down");
-    } else {
-      header.classList.remove("scroll-down");
-    }
-  }
-</script>
+                <strong>Phone:</strong> +212 62 70 59 23 3 <br>
+                <strong>Email:</strong> visit_morocco@gmail.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <!-- <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div> -->
+
+          <!-- <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div> -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Visit Morocco</span></strong>. All Rights Reserved
+      </div>
+
+    </div>
+  </footer><!-- End Footer -->
