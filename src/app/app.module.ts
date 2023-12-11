@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { DashboardComponent } from './Admin Panel/dashboard/dashboard.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './acceuil/header/header.component';
 import { FooterComponent } from './acceuil/footer/footer.component';
 
@@ -22,7 +22,7 @@ import { FooterComponent } from './acceuil/footer/footer.component';
 
     LoginComponent,
     SignUpComponent,
-    DashboardComponent,
+
     HeaderComponent,
     FooterComponent
   ],

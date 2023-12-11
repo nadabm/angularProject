@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { DashboardComponent } from './Admin Panel/dashboard/dashboard.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './acceuil/header/header.component';
 import { FooterComponent } from './acceuil/footer/footer.component';
 
@@ -19,6 +19,7 @@ path: '',
   { path: 'login', component: LoginComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'dashboard', component: DashboardComponent },
+
 ];
 
 @NgModule({

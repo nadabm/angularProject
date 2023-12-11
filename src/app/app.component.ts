@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,21 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 
 })
 export class AppComponent implements OnInit {
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  showHeader = true;
+  showFooter = true;
+    constructor(private router: Router) {}
+
+
+     ngOnInit() {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        // Check the current route and hide header/footer for login route
+        this.showHeader = !event.url.includes('/login')&& !event.url.includes('/dashboard');
+        this.showFooter = !event.url.includes('/login')&& !event.url.includes('/dashboard');
+      }
+    });
   }
+
 
   title = 'angularProject';
 
