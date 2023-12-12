@@ -8,13 +8,14 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
+import { LoginComponent } from './auth-layout/login/login.component';
+import { SignUpComponent } from './auth-layout/sign-up/sign-up.component';
 import { HeaderComponent } from './acceuil/header/header.component';
 import { FooterComponent } from './acceuil/footer/footer.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { ClientLayoutComponent } from './client-layout/client-layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HeaderComponent,
     FooterComponent,
     ClientLayoutComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    AuthLayoutComponent
   ],
   imports: [
     BrowserModule,

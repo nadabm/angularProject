@@ -11,7 +11,7 @@ export class HeaderComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.isScrolled = window.scrollY > 50; // Adjust the scroll threshold as needed
+    this.isScrolled = window.scrollY > 70; // Adjust the scroll threshold as needed
   }
 
 }
