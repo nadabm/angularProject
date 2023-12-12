@@ -30,7 +30,7 @@ h6 {
 }
 
 .scroll-down {
-  background-color: #333;
+  background-color: rgb(114, 4, 4);
   /* change this to the color you want */
 }
 
@@ -108,7 +108,7 @@ h6 {
 
 #header .logo h1 a,
 #header .logo h1 a:hover {
-  color: rgb(82, 2, 2);
+  color: rgb(189, 189, 189);
   text-decoration: none;
   font-size: 30px;
 }
@@ -147,15 +147,15 @@ h6 {
 
 /* whileeeee scrooooool ts */
 #header.scroll-down {
-  background-color: rgb(134, 120, 120);
+  background-color: rgb(58, 0, 0);
   /* Change this to the color you want when scrolled */
-  transition: background-color 0.5s ease-in-out;
-  padding: 12px;
+  transition: background-color 0.10s ease-in-out;
+  padding: 7px;
   color: #f1f1f1;
 }
 
-.white-text {
-  color: #fff !important;
+.white-text , h1{
+  color: rgb(255, 255, 255) !important;
   /* Use !important to override existing styles */
 }
 

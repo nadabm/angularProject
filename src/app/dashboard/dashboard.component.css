@@ -17,12 +17,14 @@
   margin: 15px 0;
   /* Adjust the margin for better spacing */
 }
+
 .sidebar .navbar-brand .brand-text {
   margin-bottom: 0;
   color: #fff;
   font-size: 18px;
   line-height: 1.5;
 }
+
 .sidebar .navbar-brand h3 {
   margin-bottom: 0;
   color: #fff;
@@ -31,6 +33,7 @@
   z-index: 1;
   /* You can adjust this value */
 }
+
 .sidebar .navbar-brand i {
   color: #fff;
   /* Set icon color for the logo */
@@ -131,6 +134,7 @@
 .navbar .dropdown-menu {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .content {
   margin-left: 250px;
   min-height: 100vh;
