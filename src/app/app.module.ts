@@ -14,6 +14,7 @@ import { HeaderComponent } from './acceuil/header/header.component';
 import { FooterComponent } from './acceuil/footer/footer.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { ClientLayoutComponent } from './client-layout/client-layout.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({

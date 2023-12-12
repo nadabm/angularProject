@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ClientLayoutComponent } from './client-layout/client-layout.component'; // Assuming you have a client layout
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 
 const routes: Routes = [
