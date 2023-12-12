@@ -17,9 +17,10 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         // Check the current route and hide header/footer for login route
-        this.showHeader = !event.url.includes('/login')&& !event.url.includes('/dashboard');
-        this.showFooter = !event.url.includes('/login')&& !event.url.includes('/dashboard');
+        this.showHeader = !event.url.includes('/login');
+        this.showFooter = !event.url.includes('/login');
       }
+      // && !event.url.includes('/dashboard');
     });
   }
 
