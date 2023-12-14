@@ -16,6 +16,7 @@ import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { ClientLayoutComponent } from './client-layout/client-layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
+import { RecoLayoutComponentComponent } from './reco-layout-component/reco-layout-component.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
     FooterComponent,
     ClientLayoutComponent,
     AdminLayoutComponent,
-    AuthLayoutComponent
+    AuthLayoutComponent,
+    RecoLayoutComponentComponent
   ],
   imports: [
     BrowserModule,
