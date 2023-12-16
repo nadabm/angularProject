@@ -23,13 +23,16 @@ const routes: Routes = [
     children: [
       { path: '', component: HomeComponent },
 
+
     ],
   },
+
   {
     path: 'admin',
     component: AdminLayoutComponent,
     children: [
       { path: 'dashboard', component: DashboardComponent },
+
       // ... other admin panel routes
     ],
   },
