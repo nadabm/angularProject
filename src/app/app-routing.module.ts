@@ -8,6 +8,13 @@ import { ClientLayoutComponent } from './client-layout/client-layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
+import { RecoLayoutComponentComponent } from './reco-layout-component/reco-layout-component.component';
+import { HebergementComponent } from './reco-layout-component/hebergement/hebergement.component';
+import { NatureComponent } from './reco-layout-component/nature/nature.component';
+import { SportComponent } from './reco-layout-component/sport/sport.component';
+import { ShoppingComponent } from './reco-layout-component/shopping/shopping.component';
+import { IdeeDeVoyageComponent } from './reco-layout-component/idee-de-voyage/idee-de-voyage.component';
+import { DegusterComponent } from './reco-layout-component/deguster/deguster.component';
 
 const routes: Routes = [
   {
@@ -37,6 +44,30 @@ const routes: Routes = [
           { path: 'sign-up', component: SignUpComponent },
         ],
       },
+  {
+        path: 'recom',
+        component:  RecoLayoutComponentComponent,
+        children: [
+          { path: 'deguster', component: DegusterComponent },
+          { path: 'hebergement', component: HebergementComponent },
+          { path: 'nature', component: NatureComponent },
+          { path: 'sport', component: SportComponent },
+          { path: 'shopping', component: ShoppingComponent },
+          { path: 'idee-de-voyage', component: IdeeDeVoyageComponent },
+
+
+        ],
+      },
+
+      {
+        path: 'auth',
+        component: RecoLayoutComponentComponent,
+        children: [
+          { path: 'login', component: LoginComponent },
+          { path: 'sign-up', component: SignUpComponent },
+        ],
+      },
+
 ];
 
 @NgModule({
