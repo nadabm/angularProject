@@ -121,6 +121,16 @@
             >Contact</a
           >
         </li>
+        <li>
+  <a
+    [class.white-text]="isScrolled"
+    class="nav-link scrollto"
+    routerLink="/recom/deguster"
+  >
+    <i class="fas fa-sign-in-alt"></i> Recomendation
+  </a>
+</li>
+
         <!-- Add login and signup buttons -->
         <!-- <li *ngIf="!authService.isAuthenticated$ | async; else login">
               <a [class.white-text]="isScrolled" class="nav-link scrollto" routerLink="/login">Login</a>
