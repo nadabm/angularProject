@@ -17,6 +17,7 @@ import { ClientLayoutComponent } from './client-layout/client-layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { RecoLayoutComponentComponent } from './reco-layout-component/reco-layout-component.component';
+
 import { HebergementComponent } from './reco-layout-component/hebergement/hebergement.component';
 import { DegusterComponent } from './reco-layout-component/deguster/deguster.component';
 import { SportComponent } from './reco-layout-component/sport/sport.component';
@@ -38,6 +39,7 @@ import { NavbarComponent } from './reco-layout-component/navbar/navbar.component
     ClientLayoutComponent,
     AdminLayoutComponent,
     AuthLayoutComponent,
+
     RecoLayoutComponentComponent,
     HebergementComponent,
     DegusterComponent,
