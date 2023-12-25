@@ -121,6 +121,16 @@
             >Contact</a
           >
         </li>
+        <li>
+  <a
+    [class.white-text]="isScrolled"
+    class="nav-link scrollto"
+    routerLink="/auth/login"
+  >
+  <strong><i class="bi bi-people"></i></strong>
+  </a>
+</li>
+
         <!-- Add login and signup buttons -->
         <!-- <li *ngIf="!authService.isAuthenticated$ | async; else login">
               <a [class.white-text]="isScrolled" class="nav-link scrollto" routerLink="/login">Login</a>
@@ -129,7 +139,7 @@
               <a [class.white-text]="isScrolled" class="nav-link scrollto" routerLink="/signup">Signup</a>
             </li> -->
       </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
+
     </nav>
     <!-- .navbar -->
   </div>
@@ -140,7 +150,7 @@
   <div class="hero-container" data-aos="fade-up">
     <h1>Welcome to Morocco</h1>
     <h2>Embark on a Journey of Culture, History, and Soccer Excellence</h2>
-    <a href="#about" class="btn-get-started scrollto">
+    <a href="#team" class="btn-get-started scrollto">
       <i class="bi bi-chevron-double-down"></i>
     </a>
   </div>
