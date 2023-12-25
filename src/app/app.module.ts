@@ -23,6 +23,7 @@ import { SportComponent } from './reco-layout-component/sport/sport.component';
 import { NatureComponent } from './reco-layout-component/nature/nature.component';
 import { ShoppingComponent } from './reco-layout-component/shopping/shopping.component';
 import { IdeeDeVoyageComponent } from './reco-layout-component/idee-de-voyage/idee-de-voyage.component';
+import { NavbarComponent } from './reco-layout-component/navbar/navbar.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { IdeeDeVoyageComponent } from './reco-layout-component/idee-de-voyage/id
     SportComponent,
     NatureComponent,
     ShoppingComponent,
-    IdeeDeVoyageComponent
+    IdeeDeVoyageComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
