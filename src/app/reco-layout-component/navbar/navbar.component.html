@@ -1,13 +1,5 @@
-<!-- ======= Header ======= -->
-<header
-  id="header"
-  [class.scroll-down]="isScrolled"
-  class="fixed-top header-transparent"
-  (window:scroll)="onWindowScroll()"
->
-  <div
-    class="container d-flex align-items-center justify-content-between position-relative"
-  >
+<header id="header" class="fixed-top header-transparent">
+  <div class="container d-flex align-items-center justify-content-between position-relative">
     <div class="logo">
       <h1 class="text-light">
         <a href="index.html"><span>Visit Morocco</span></a>
@@ -19,16 +11,11 @@
     <nav id="navbar" class="navbar">
       <ul>
         <li>
-          <a
-            [class.white-text]="isScrolled"
-            class="nav-link scrollto"
-            href="#hero"
-            >Home</a
-          >
+          <a class="nav-link scrollto" href="#hero">Home</a>
         </li>
         <li>
           <a
-            [class.white-text]="isScrolled"
+
             class="nav-link scrollto"
             href="#about"
             >About Morocco</a
@@ -36,7 +23,7 @@
         </li>
         <li>
           <a
-            [class.white-text]="isScrolled"
+
             class="nav-link scrollto"
             href="#services"
             >Destination</a
@@ -44,7 +31,7 @@
         </li>
         <li>
           <a
-            [class.white-text]="isScrolled"
+
             class="nav-link scrollto"
             href="#portfolio"
             href="#section1"
@@ -53,7 +40,7 @@
         </li>
         <!-- <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
         <li class="dropdown">
-          <a [class.white-text]="isScrolled" href="#"
+          <a  href="#"
             ><span>Matches</span> <i class="bi bi-chevron-down"></i
           ></a>
           <ul>
@@ -118,7 +105,7 @@
             </li> -->
         <li>
           <a
-            [class.white-text]="isScrolled"
+
             class="nav-link scrollto"
             href="#contact"
             >Contact</a
@@ -139,13 +126,4 @@
 </header>
 <!-- End Header -->
 <!-- ======= Hero Section ======= -->
-<section id="hero">
-  <div class="hero-container" data-aos="fade-up">
-    <h1>Welcome to Morocco</h1>
-    <h2>Embark on a Journey of Culture, History, and Soccer Excellence</h2>
-    <a href="#about" class="btn-get-started scrollto">
-      <i class="bi bi-chevron-double-down"></i>
-    </a>
-  </div>
-</section>
 <!-- End Hero -->

@@ -1,61 +1,363 @@
+/* styles.css */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+/* Add this to your existing CSS */
+
+/* ======= Hero Section ======= */
+
+.about {
+  background: url("/assets/gallery/about.jpg") center center;
+  background-size: cover;
+  position: relative;
+  padding: 80px 0;
+  text-align: center;
+  color: #fff;
+}
+.about::before {
+  content: "";
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+.about .hero-content {
+  margin-top: 50px;
+}
+
+.about .hero-content h1:hover {
+  font-size: 40px;
+  /* Adjust the font size on hover */
+}
+
+.about .hero-content h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+  /* Set the text color to white */
+  position: relative;
+  display: inline-block;
+  transition: font-size 0.5s;
+  /* Added transition for a smooth effect */
+}
+/* Adjust h2 color to white and add hover effect */
+.about .hero-content h2 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 20px;
+  color: white;
+  transition: font-size 0.5s, color 0.5s;
+  /* Add color transition */
+}
+
+.about .hero-content h2:hover {
+  font-size: 22px;
+  color: #cda45e;
+  /* Adjust the color on hover */
+}
+
+
+.about .hero-content  h1 span {
+  color: #cda45e;
+  font-weight: bold;
+}
+
+.about .content {
+  position: relative;
+}
+
+.about .content h3 {
+  font-weight: 600;
+  font-size: 26px;
+  color: white;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding-bottom: 10px;
+}
+
+.about .content ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #cda45e;
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+.about .about-img {
+  position: relative;
+  transition: 0.5s;
+}
+
+.about .about-img img {
+  max-width: 100%;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+.about .content p {
+  position: relative;
+  padding-left: 15px;
+  /* Add padding for better visibility of the border */
+  transition: padding-left 0.5s;
+  /* Add transition for padding */
+}
+
+.about .content p::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: #cda45e;
+  /* Adjust the color as needed */
+  top: 0;
+  left: 0;
+  transition: width 0.5s;
+  /* Add transition for width */
+}
+
+.about .content p:hover::before {
+  width: 10px;
+  /* Adjust the width on hover */
+}
+
+.about .content p+p::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: #cda45e;
+  /* Adjust the color as needed */
+  bottom: 0;
+  right: 0;
+  transition: width 0.5s;
+  /* Add transition for width */
+}
+
+.about .content p:hover+p::before {
+  width: 10px;
+  /* Adjust the width on hover */
+}
+
+@media (min-width: 1024px) {
+  .about {
+    background-attachment: fixed;
+  }
+}
+
+/* Why Us Section */
+
+.why-us .box {
+  background: #fff;
+  padding: 30px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.322);
+  transition: all ease-in-out 0.3s;
+}
+
+.why-us .box span {
+  display: block;
+  font-size: 36px;
+  font-weight: bold;
+  color: rgb(58, 0, 0);
+  margin-bottom: 15px;
+}
+
+.why-us .box h4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+  /* Dark text color */
+}
+
+.why-us .box p {
+  color: #666;
+  /* Medium text color */
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.why-us .box:hover {
+  background:rgb(58, 0, 0);
+  color: #fff;
+  /* White text color on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.404);
+}
+
+.why-us .box:hover span {
+  color: #fff;
+}
 /*--------------------------------------------------------------
 # Specials
 --------------------------------------------------------------*/
-.specials {
-  overflow: hidden;
+/* ======= Specials Section ======= */
+#specials {
+  background-color: #f8f9fa;
+  /* Set a light background color for the section */
+  padding: 80px 0;
+  /* Add padding to the section */
+}
+
+.specials .container {
+  position: relative;
+}
+
+.specials .section-title {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.specials .row {
+  display: flex;
+  align-items: center;
 }
 
 .specials .nav-tabs {
   border: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .specials .nav-link {
-  border: 0;
-  padding: 12px 15px;
-  transition: 0.3s;
-  color: #fff;
-  border-radius: 0;
-  border-right: 2px solid #cda45e;
-  font-weight: 600;
-  font-size: 15px;
+  color: rgb(58, 0, 0);
+  border-right: 2px solid transparent;
+  padding: 15px;
+  transition: all ease-in-out 0.3s;
 }
 
-.specials .nav-link:hover {
-  color: #cda45e;
-}
-
+.specials .nav-link:hover,
 .specials .nav-link.active {
   color: #1a1814;
-  background: #cda45e;
-  border-color: #cda45e;
+  background: rgb(58, 0, 0);
+  border-color: rgb(58, 0, 0);
 }
 
 .specials .nav-link:hover {
-  border-color: #cda45e;
+  border-color: rgb(58, 0, 0);
 }
 
-.specials .tab-pane.active {
-  animation: fadeIn 0.5s ease-out;
+.specials .tab-content {
+  flex: 2;
+  padding-left: 30px;
+  /* Add some spacing between nav and content */
 }
 
 .specials .details h3 {
   font-size: 26px;
   font-weight: 600;
   margin-bottom: 20px;
-  color: #fff;
+  color: rgb(58, 0, 0);
 }
 
 .specials .details p {
+  color: #555;
+  /* Adjusted text color */
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  /* Add some spacing between paragraphs */
+}
+
+/* Optional: Add box shadow for a subtle elevation effect */
+.specials .details {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 30px;
+}
+
+/* Optional: Style the images with a border and border-radius */
+.specials .details img {
+  max-width: 100%;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Optional: Style the tabs to be more visually appealing */
+.specials .nav-link {
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: 1px;
+}
+
+.specials .nav-link.active {
+  background: rgb(58, 0, 0);
+  color: #fff;
+  border-color: rgb(58, 0, 0);
+}
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #1a1814;
+}
+
+.section-title {
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0;
+  line-height: 3px;
+  margin: 0 0 5px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   color: #aaaaaa;
+  font-family: "Poppins", sans-serif;
 }
 
-.specials .details p:last-child {
-  margin-bottom: 0;
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 4px 10px;
 }
 
-@media (max-width: 992px) {
-  .specials .nav-link {
-    border: 0;
-    padding: 15px;
-  }
+.section-title p {
+  margin: 0;
+  margin: 0;
+  font-size: 40px;
+  font-weight: 800;
+  font-family: "Playfair Display", serif;
+  color: rgb(58, 0, 0);
+}
+
+/*--------------------------------------------------------------
+# Gallery
+--------------------------------------------------------------*/
+
+.gallery .gallery-item {
+  border: 3px solid #1a1814;
+  overflow: hidden;
+}
+
+.gallery .gallery-item img {
+  transition: transform 0.4s;
+}
+
+.gallery .gallery-item:hover img {
+  transform: scale(1.1);
 }
