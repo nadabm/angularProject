@@ -18,6 +18,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { RecoLayoutComponentComponent } from './reco-layout-component/reco-layout-component.component';
 
+import { HebergementComponent } from './reco-layout-component/hebergement/hebergement.component';
+import { DegusterComponent } from './reco-layout-component/deguster/deguster.component';
+import { SportComponent } from './reco-layout-component/sport/sport.component';
+import { NatureComponent } from './reco-layout-component/nature/nature.component';
+import { ShoppingComponent } from './reco-layout-component/shopping/shopping.component';
+import { IdeeDeVoyageComponent } from './reco-layout-component/idee-de-voyage/idee-de-voyage.component';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +38,14 @@ import { RecoLayoutComponentComponent } from './reco-layout-component/reco-layou
     ClientLayoutComponent,
     AdminLayoutComponent,
     AuthLayoutComponent,
-    RecoLayoutComponentComponent
+
+    RecoLayoutComponentComponent,
+    HebergementComponent,
+    DegusterComponent,
+    SportComponent,
+    NatureComponent,
+    ShoppingComponent,
+    IdeeDeVoyageComponent
   ],
   imports: [
     BrowserModule,

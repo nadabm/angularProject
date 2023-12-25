@@ -10,7 +10,10 @@ import { NavigationEnd, Router } from '@angular/router';
 export class AppComponent implements OnInit {
   showHeader = true;
   showFooter = true;
-    constructor(private router: Router) {}
+    constructor(private router: Router) {
+        // Fonction appelée lorsque le bouton est cliqué
+
+    }
 
 
      ngOnInit() {
@@ -23,6 +26,8 @@ export class AppComponent implements OnInit {
       // && !event.url.includes('/dashboard');
     });
   }
+
+
 
 
   title = 'angularProject';
