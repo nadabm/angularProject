@@ -15,6 +15,8 @@ export class DegusterComponent implements OnInit {
     // Autres actions à effectuer lors du chargement du composant...
   }
 
+
+
 }
 
 
