@@ -1,0 +1,127 @@
+/* Add this to your existing CSS or create a new stylesheet */
+
+/* General styles */
+.tm-container-outer {
+  padding: 40px 0;
+}
+
+.tm-tabs-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tm-tab-link-li {
+  margin: 0 10px 10px 0;
+}
+
+.tm-tab-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.tm-tab-link img {
+  width: 50px;
+  /* Adjust the size of the small pictures */
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.tm-tab-link:hover {
+  color: #007bff;
+}
+
+/* Active tab style */
+.tm-tab-link.active {
+  color: #007bff;
+}
+
+/* Tab content style */
+.tab-content {
+  padding: 20px 0;
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tm-recommended-place {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tm-recommended-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.tm-recommended-description-box {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.tm-recommended-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.tm-text-highlight {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.tm-text-gray {
+  color: #666;
+}
+
+.tm-recommended-price-box {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tm-recommended-price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tm-recommended-price-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.tm-recommended-price-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tm-tab-link-li {
+    width: 50%;
+  }
+
+  .tm-recommended-place {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .tm-tab-link-li {
+    width: 100%;
+  }
+}
