@@ -38,7 +38,8 @@ h6 {
 --------------------------------------------------------------*/
 #header {
   transition: all 0.5s;
-  z-index: 997;
+position: relative;
+  z-index: 1;
   transition: all 0.5s;
   padding: 12px 0;
   background-color: rgb(58, 0, 0);

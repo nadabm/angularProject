@@ -16,6 +16,8 @@ import { IdeeDeVoyageComponent } from './reco-layout-component/idee-de-voyage/id
 import { NatureComponent } from './reco-layout-component/nature/nature.component';
 import { ShoppingComponent } from './reco-layout-component/shopping/shopping.component';
 import { SportComponent } from './reco-layout-component/sport/sport.component';
+import { DestinationLayoutComponent } from './destination-layout/destination-layout.component';
+import { TangerDestComponent } from './destination-layout/tanger-dest/tanger-dest.component';
 
 const routes: Routes = [
   {
@@ -63,6 +65,14 @@ const routes: Routes = [
         children: [
           { path: 'login', component: LoginComponent },
           { path: 'sign-up', component: SignUpComponent },
+        ],
+  },
+            {
+        path: 'destination',
+        component: DestinationLayoutComponent,
+        children: [
+          { path: 'tanger', component: TangerDestComponent }
+
         ],
       },
 

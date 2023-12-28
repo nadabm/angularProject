@@ -1,0 +1,129 @@
+<!-- app.component.html -->
+
+<section id="destination" style="margin-top: 20px; margin-bottom: 20px; z-index: 1;">
+  <!-- Button List as Navbar -->
+  <nav class="box-navbar">
+    <ul class="box-buttons">
+      <li *ngFor="let boxId of boxIds">
+        <button (click)="selectBox(boxId)" [class.active]="selectedBoxId === boxId">Box {{ boxId }}</button>
+      </li>
+      <li>
+        <button (click)="selectBox(null)" [class.active]="selectedBoxId === null">Show All Boxes</button>
+      </li>
+    </ul>
+  </nav>
+
+
+
+
+
+
+
+
+
+<div class="container">
+<!-- Box 1 -->
+<div class="box" id="box1" *ngIf="!selectedBoxId || selectedBoxId === 'box1'">
+  <div class="image">
+    <!-- Add style attribute to control the image size -->
+    <img src="assets/gallery/hercules.jpg" alt="Your Image 1" style="width: 150px; height: auto;">
+  </div>
+  <div class="description">
+    <h2>Cave of Hercules</h2>
+    <p>The Cave of Hercules, near Tangier, Morocco, is a natural limestone cave with a mythological connection to
+      Hercules,
+      who, according to legend, rested there after completing a labor. The cave's entrance resembles the shape of
+      Africa, and
+      it offers scenic views of the Atlantic Ocean. Besides its mythological significance, the cave has archaeological
+      importance, showing evidence of past civilizations. Today, it's a popular tourist attraction known for its
+      natural
+      beauty and historical intrigue.</p>
+    <div class="icons">
+      <!-- Use a heart icon from Bootstrap Icons, toggle its color and text on click -->
+      <button class="heart-button" [class.red]="isFavorite('box1')" (click)="toggleFavorite('box1')">
+        <i class="bi bi-suit-heart-fill" [class.red]="isFavorite('box1')"></i>
+        <span *ngIf="!isFavorite('box1')"><strong>ADD TO YOUR FAV</strong></span>
+        <span *ngIf="isFavorite('box1')" style="color: red;"><strong>ADDED</strong></span>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    <!-- Box 2 -->
+    <div class="box" id="box2" *ngIf="!selectedBoxId || selectedBoxId === 'box2'">
+      <div class="image">
+        <!-- Add style attribute to control the image size -->
+        <img src="assets/gallery/perdicaris.jpg" alt="Your Image 1" >
+      </div>
+      <div class="description">
+        <h2>The Perdicaris Park</h2>
+        <p>The Perdicaris Park, also known as the Rmilat Forest and formerly as Villa Aidonia or Place of the Nightingales, is a
+        public park covering 70 hectares in the Rmilat neighborhood of Tangier, Morocco. It is located on the northern slopes of
+        the Jebel Kebir hill facing the Strait of Gibraltar, between the Cape Spartel reserve to its west and the Jebel Kebir
+        Royal Palace to its east. It is named after Greek-American notable Ion Hanford Perdicaris, who created it in the 1870s
+        and was kidnapped there in the mid-1904 Perdicaris Incident</p>
+    <div class="icons">
+      <!-- Use a heart icon from Bootstrap Icons, toggle its color and text on click -->
+      <button class="heart-button" [class.red]="isFavorite('box1')" (click)="toggleFavorite('box2')">
+        <i class="bi bi-suit-heart-fill" [class.red]="isFavorite('box2')"></i>
+        <span *ngIf="!isFavorite('box2')"><strong>ADD TO YOUR FAV</strong></span>
+        <span *ngIf="isFavorite('box2')" style="color: red;"><strong>ADDED</strong></span>
+      </button>
+    </div>
+      </div>
+    </div>
+
+    <!-- Box 3 -->
+    <div class="box" id="box3" *ngIf="!selectedBoxId || selectedBoxId === 'box3'">
+      <div class="image">
+        <!-- Add style attribute to control the image size -->
+        <img src="assets/gallery/kasbah.jpg" alt="Your Image 1">
+      </div>
+      <div class="description">
+        <h2>The Kasbah (Kasbah Museum)</h2>
+        <p>The Kasbah of Tangier, a historic fortress with winding streets, reflects centuries of cultural influences, from Arab to
+        European. The Kasbah Museum, housed in the Dar el-Makhzen palace, showcases Moroccan art and history. Exploring its
+        narrow alleys reveals charming cafés and traditional markets. With panoramic views of Tangier and the Mediterranean, The
+        Kasbah stands as an iconic testament to the city's rich heritage and vibrant cultural tapestry.</p>
+      <!-- Use a heart icon from Bootstrap Icons, toggle its color and text on click -->
+      <button class="heart-button" [class.red]="isFavorite('box1')" (click)="toggleFavorite('box3')">
+        <i class="bi bi-suit-heart-fill" [class.red]="isFavorite('box3')"></i>
+        <span *ngIf="!isFavorite('box3')"><strong>ADD TO YOUR FAV</strong></span>
+        <span *ngIf="isFavorite('box3')" style="color: red;"><strong>ADDED</strong></span>
+      </button>
+        </div>
+      </div>
+    </div>
+<div class="card comment-card">
+  <div class="row">
+    <div class="col-12">
+      <div class="comment-box">
+        <h4>Add a Comment</h4>
+        <div class="rating">
+          <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+          <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+          <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+          <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+          <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+        </div>
+        <div class="comment-area">
+          <textarea class="form-control" placeholder="Your thoughts..." rows="3"></textarea>
+        </div>
+        <div class="comment-btns">
+          <button class="btn btn-cancel btn-sm">Cancel</button>
+          <button class="btn btn-send btn-sm">Send <i class="fa fa-long-arrow-right ml-1"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Button List -->
+
+</section>
+
