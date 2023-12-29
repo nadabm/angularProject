@@ -11,8 +11,6 @@ import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { RecoLayoutComponentComponent } from './reco-layout-component/reco-layout-component.component';
 
 import { DegusterComponent } from './reco-layout-component/deguster/deguster.component';
-
-import { MatchesComponent } from './matches/matches.component';
 import { HebergementComponent } from './reco-layout-component/hebergement/hebergement.component';
 import { IdeeDeVoyageComponent } from './reco-layout-component/idee-de-voyage/idee-de-voyage.component';
 import { NatureComponent } from './reco-layout-component/nature/nature.component';
@@ -33,9 +31,7 @@ const routes: Routes = [
 
     ],
   },
-  {
-    path:'/matches', component:MatchesComponent
-  },
+
   {
     path: 'admin',
     component: AdminLayoutComponent,
@@ -67,14 +63,7 @@ const routes: Routes = [
         ],
       },
 
-      {
-        path: 'auth',
-        component: RecoLayoutComponentComponent,
-        children: [
-          { path: 'login', component: LoginComponent },
-          { path: 'sign-up', component: SignUpComponent },
-        ],
-  },
+
             {
         path: 'destination',
         component: DestinationLayoutComponent,
