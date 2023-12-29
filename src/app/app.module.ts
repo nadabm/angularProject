@@ -24,8 +24,10 @@ import { NatureComponent } from './reco-layout-component/nature/nature.component
 import { ShoppingComponent } from './reco-layout-component/shopping/shopping.component';
 import { IdeeDeVoyageComponent } from './reco-layout-component/idee-de-voyage/idee-de-voyage.component';
 import { NavbarComponent } from './reco-layout-component/navbar/navbar.component';
+
 import { DestinationLayoutComponent } from './destination-layout/destination-layout.component';
 import { TangerDestComponent } from './destination-layout/tanger-dest/tanger-dest.component';
+
 
 
 @NgModule({
@@ -47,9 +49,13 @@ import { TangerDestComponent } from './destination-layout/tanger-dest/tanger-des
     NatureComponent,
     ShoppingComponent,
     IdeeDeVoyageComponent,
+
+
     NavbarComponent,
+
     DestinationLayoutComponent,
     TangerDestComponent
+
   ],
   imports: [
     BrowserModule,

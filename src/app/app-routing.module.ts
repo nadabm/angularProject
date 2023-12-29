@@ -11,15 +11,20 @@ import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { RecoLayoutComponentComponent } from './reco-layout-component/reco-layout-component.component';
 
 import { DegusterComponent } from './reco-layout-component/deguster/deguster.component';
+import { DestinationLayoutComponent } from './destination-layout/destination-layout.component';
+import { TangerDestComponent } from './destination-layout/tanger-dest/tanger-dest.component';
+
 import { HebergementComponent } from './reco-layout-component/hebergement/hebergement.component';
 import { IdeeDeVoyageComponent } from './reco-layout-component/idee-de-voyage/idee-de-voyage.component';
 import { NatureComponent } from './reco-layout-component/nature/nature.component';
 import { ShoppingComponent } from './reco-layout-component/shopping/shopping.component';
 import { SportComponent } from './reco-layout-component/sport/sport.component';
-import { DestinationLayoutComponent } from './destination-layout/destination-layout.component';
-import { TangerDestComponent } from './destination-layout/tanger-dest/tanger-dest.component';
+
+
 
 const routes: Routes = [
+
+
   {
     path: '',
     component: ClientLayoutComponent, // Use ClientLayoutComponent for the client section
@@ -28,6 +33,7 @@ const routes: Routes = [
 
     ],
   },
+
   {
     path: 'admin',
     component: AdminLayoutComponent,
@@ -59,14 +65,7 @@ const routes: Routes = [
         ],
       },
 
-      {
-        path: 'auth',
-        component: RecoLayoutComponentComponent,
-        children: [
-          { path: 'login', component: LoginComponent },
-          { path: 'sign-up', component: SignUpComponent },
-        ],
-  },
+
             {
         path: 'destination',
         component: DestinationLayoutComponent,
