@@ -28,9 +28,7 @@ const routes: Routes = [
 
     ],
   },
-  {
-    path:'/matches', component:MatchesComponent
-  },
+
   {
     path: 'admin',
     component: AdminLayoutComponent,
