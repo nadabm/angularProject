@@ -24,7 +24,6 @@ import { NatureComponent } from './reco-layout-component/nature/nature.component
 import { ShoppingComponent } from './reco-layout-component/shopping/shopping.component';
 import { IdeeDeVoyageComponent } from './reco-layout-component/idee-de-voyage/idee-de-voyage.component';
 import { NavbarComponent } from './reco-layout-component/navbar/navbar.component';
-import { MatchesComponent } from './matches/matches.component';
 
 
 @NgModule({
@@ -46,14 +45,14 @@ import { MatchesComponent } from './matches/matches.component';
     NatureComponent,
     ShoppingComponent,
     IdeeDeVoyageComponent,
-    NavbarComponent,
-    MatchesComponent
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

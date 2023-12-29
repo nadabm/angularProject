@@ -1,0 +1,267 @@
+ .container {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   position: relative;
+   z-index: 0;
+   /* Set a base z-index */
+ }
+
+ .box {
+   width: 100%;
+   box-sizing: border-box;
+   position: relative;
+   padding: 20px;
+   margin: 20px;
+   border: 1px solid #ddd;
+   z-index: 1;
+   background: #fff;
+   text-align: center;
+   border-radius: 10px;
+   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.322);
+   transition: all ease-in-out 0.3s;
+   display: flex;
+   /* Use flexbox for layout */
+   align-items: flex-start;
+   /* Align items to the top of the flex container */
+   justify-content: space-between;
+   /* Space between image and description */
+ }
+
+ .image {
+   width: 50%;
+   position: relative;
+ }
+
+ .image img {
+   width: 100%;
+   /* Make the image fill its container */
+   max-width: 300px;
+   /* Set a maximum width */
+   height: auto;
+   /* Maintain aspect ratio */
+   display: block;
+   /* Remove extra space below inline images */
+   margin: 0 auto;
+   /* Center the image horizontally */
+ }
+
+ .heart-icon {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   color: red;
+   cursor: pointer;
+ }
+
+ .description {
+   width: 50%;
+   padding-left: 20px;
+ }
+
+ .icons {
+   margin-top: 10px;
+   /* Add styles for other icons if needed */
+ }
+
+ .box:hover {
+   background: rgb(43, 5, 5);
+   color: #fff;
+   /* White text color on hover */
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.486);
+ }
+
+ .box:hover .heart-icon {
+   color: #fff;
+ }
+
+ /* Dropdown Styles */
+/* Add this to your CSS file or styles section */
+
+.box-navbar {
+  display: flex;
+  justify-content: center;
+  /* Center the navigation items */
+  align-items: center;
+  /* Align items vertically in the center */
+  background-color: #d7e1e7;
+  /* Set a background color for the navigation bar */
+  padding: 15px;
+  border-radius: 8px;
+  /* Add border-radius for a rounded look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  /* Add margin to separate from the content */
+}
+
+.box-buttons {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.box-buttons li {
+  margin-right: 15px;
+  position: relative;
+}
+
+.box-buttons .dropdown-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.box-buttons .dropdown-button {
+  background-color: #fff;
+  color: #cfd3d6;
+  /* Set the text color for the button */
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.box-buttons .dropdown-item {
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.box-buttons .dropdown-item.active {
+  background-color: #f0f0f0;
+}
+
+.box-buttons li:hover .dropdown-container {
+  display: flex;
+}
+
+/* Add any other styles as needed for the overall page */
+/* Add this to your CSS file or styles section */
+
+.heart-button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  /* Adjust font size as needed */
+  background: none;
+  /* Remove background if not needed */
+  border: none;
+  /* Remove border if not needed */
+  transition: color 0.3s;
+}
+
+.heart-button i.red {
+  color: red;
+}
+
+
+
+.comment-card {
+  width: 100%;
+  max-width:550px;
+  /* Adjust the max-width as needed */
+  box-sizing: border-box;
+  position: relative;
+  padding: 20px;
+  margin: 20px auto;
+  /* Center the card using auto margins */
+  border: 1px solid #ddd;
+  z-index: 1;
+  background: #fff;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.322);
+  transition: all ease-in-out 0.3s;
+}
+
+.comment-box {
+  padding: 5px;
+}
+
+.comment-area textarea {
+  resize: none;
+  border: 1px solid #ad9f9f;
+  padding: 8px;
+  margin-top: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #ffffff;
+  outline: 0;
+  box-shadow: 0 0 0 1px rgb(255, 0, 0) !important;
+}
+
+.send {
+  color: #fff;
+  background-color: #ff0000;
+  border-color: #ff0000;
+  transition: background-color 0.3s ease;
+}
+
+.send:hover {
+  background-color: #f50202;
+}
+
+.rating {
+  display: flex;
+  margin-top: -10px;
+  flex-direction: row-reverse;
+  margin-left: -4px;
+  float: left;
+}
+
+.rating>input {
+  display: none;
+}
+
+.rating>label {
+  position: relative;
+  width: 19px;
+  font-size: 25px;
+  color: #ff0000;
+  cursor: pointer;
+}
+
+.rating>label::before {
+  content: "\2605";
+  position: absolute;
+  opacity: 0;
+}
+
+.rating>label:hover::before,
+.rating>label:hover~label::before {
+  opacity: 1 !important;
+}
+
+.rating>input:checked~label::before {
+  opacity: 1;
+}
+
+.rating:hover>input:checked~label::before {
+  opacity: 0.4;
+}
+
+.comment-btns {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.btn-cancel {
+  background-color: #dc3545;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.btn-send {
+  background-color: #28a745;
+  color: #fff;
+}
