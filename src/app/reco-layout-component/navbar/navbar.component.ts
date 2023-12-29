@@ -6,10 +6,10 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
-  isScrolled: boolean = false;
+  // isScrolled: boolean = false;
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    this.isScrolled = window.scrollY > 70; // Adjust the scroll threshold as needed
-  }
+  // @HostListener('window:scroll', [])
+  // onWindowScroll() {
+  //   this.isScrolled = window.scrollY > 70; // Adjust the scroll threshold as needed
+  // }
 }

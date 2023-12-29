@@ -29,72 +29,26 @@ h6 {
   margin-top: 90px;
 }
 
-.scroll-down {
-  background-color: rgb(114, 4, 4);
-  /* change this to the color you want */
-}
 
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
-.back-to-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 998;
-  background: #67b0d1;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  transition: all 0.4s;
-}
 
-.back-to-top i {
-  font-size: 24px;
-  color: rgb(49, 6, 6);
-  line-height: 0;
-}
 
-.back-to-top:hover {
-  background: #86c0da;
-  color: rgb(233, 13, 13);
-}
-
-.back-to-top.active {
-  visibility: visible;
-  opacity: 1;
-}
-
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
-}
 
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 #header {
   transition: all 0.5s;
-  z-index: 997;
+position: relative;
+  z-index: 1;
   transition: all 0.5s;
-  padding: 24px 0;
-  background: rgba(187, 19, 7, 0.8);
+  padding: 12px 0;
+  background-color: rgb(58, 0, 0);
 }
 
 #header.header-transparent {
-  background: transparent;
+  background-color: rgb(58, 0, 0);
 }
 
-#header.header-scrolled {
-  background: rgba(228, 18, 11, 0.9) !important;
-  padding: 12px;
-}
 
 #header .logo h1 {
   font-size: 24px;
@@ -125,14 +79,7 @@ h6 {
   }
 }
 
-#header.scroll-nav {
-  background-color: #f1f1f1;
-  /* Replace with your desired color */
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 9999;
-}
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -143,6 +90,7 @@ h6 {
 .navbar {
   padding: 0;
   position: static;
+  background-color: rgb(58, 0, 0);
 }
 
 /* whileeeee scrooooool ts */
@@ -183,7 +131,7 @@ h1 {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 750;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   white-space: nowrap;
   transition: 0.3s;
 }

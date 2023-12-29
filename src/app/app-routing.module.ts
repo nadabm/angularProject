@@ -9,13 +9,18 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { RecoLayoutComponentComponent } from './reco-layout-component/reco-layout-component.component';
-import { HebergementComponent } from './reco-layout-component/hebergement/hebergement.component';
-import { NatureComponent } from './reco-layout-component/nature/nature.component';
-import { SportComponent } from './reco-layout-component/sport/sport.component';
-import { ShoppingComponent } from './reco-layout-component/shopping/shopping.component';
-import { IdeeDeVoyageComponent } from './reco-layout-component/idee-de-voyage/idee-de-voyage.component';
+
 import { DegusterComponent } from './reco-layout-component/deguster/deguster.component';
+
 import { MatchesComponent } from './matches/matches.component';
+import { HebergementComponent } from './reco-layout-component/hebergement/hebergement.component';
+import { IdeeDeVoyageComponent } from './reco-layout-component/idee-de-voyage/idee-de-voyage.component';
+import { NatureComponent } from './reco-layout-component/nature/nature.component';
+import { ShoppingComponent } from './reco-layout-component/shopping/shopping.component';
+import { SportComponent } from './reco-layout-component/sport/sport.component';
+import { DestinationLayoutComponent } from './destination-layout/destination-layout.component';
+import { TangerDestComponent } from './destination-layout/tanger-dest/tanger-dest.component';
+
 
 const routes: Routes = [
 
@@ -68,6 +73,14 @@ const routes: Routes = [
         children: [
           { path: 'login', component: LoginComponent },
           { path: 'sign-up', component: SignUpComponent },
+        ],
+  },
+            {
+        path: 'destination',
+        component: DestinationLayoutComponent,
+        children: [
+          { path: 'tanger', component: TangerDestComponent }
+
         ],
       },
 
