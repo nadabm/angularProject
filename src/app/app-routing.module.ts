@@ -15,8 +15,11 @@ import { SportComponent } from './reco-layout-component/sport/sport.component';
 import { ShoppingComponent } from './reco-layout-component/shopping/shopping.component';
 import { IdeeDeVoyageComponent } from './reco-layout-component/idee-de-voyage/idee-de-voyage.component';
 import { DegusterComponent } from './reco-layout-component/deguster/deguster.component';
+import { MatchesComponent } from './matches/matches.component';
 
 const routes: Routes = [
+
+
   {
     path: '',
     component: ClientLayoutComponent, // Use ClientLayoutComponent for the client section
@@ -24,6 +27,9 @@ const routes: Routes = [
       { path: '', component: HomeComponent },
 
     ],
+  },
+  {
+    path:'/matches', component:MatchesComponent
   },
   {
     path: 'admin',
