@@ -25,7 +25,6 @@ import { ShoppingComponent } from './reco-layout-component/shopping/shopping.com
 import { IdeeDeVoyageComponent } from './reco-layout-component/idee-de-voyage/idee-de-voyage.component';
 import { NavbarComponent } from './reco-layout-component/navbar/navbar.component';
 
-import { MatchesComponent } from './matches/matches.component';
 import { DestinationLayoutComponent } from './destination-layout/destination-layout.component';
 import { TangerDestComponent } from './destination-layout/tanger-dest/tanger-dest.component';
 
@@ -53,7 +52,7 @@ import { TangerDestComponent } from './destination-layout/tanger-dest/tanger-des
 
 
     NavbarComponent,
-    MatchesComponent,
+
     DestinationLayoutComponent,
     TangerDestComponent
 
