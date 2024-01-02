@@ -11,9 +11,6 @@ import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { RecoLayoutComponentComponent } from './reco-layout-component/reco-layout-component.component';
 
 import { DegusterComponent } from './reco-layout-component/deguster/deguster.component';
-
-import { MatchesComponent } from './matches/matches.component';
-
 import { DestinationLayoutComponent } from './destination-layout/destination-layout.component';
 import { TangerDestComponent } from './destination-layout/tanger-dest/tanger-dest.component';
 
