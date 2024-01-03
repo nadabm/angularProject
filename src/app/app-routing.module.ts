@@ -1,7 +1,6 @@
 // app-routing.module.ts
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './auth-layout/login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './auth-layout/sign-up/sign-up.component';
 import { ClientLayoutComponent } from './client-layout/client-layout.component'; // Assuming you have a client layout
@@ -19,6 +18,7 @@ import { IdeeDeVoyageComponent } from './reco-layout-component/idee-de-voyage/id
 import { NatureComponent } from './reco-layout-component/nature/nature.component';
 import { ShoppingComponent } from './reco-layout-component/shopping/shopping.component';
 import { SportComponent } from './reco-layout-component/sport/sport.component';
+import { LoginComponent } from './auth-layout/login/login.component';
 
 
 
