@@ -1,0 +1,49 @@
+<!-- client-management.component.html -->
+
+<div class="container mt-5">
+  <h2>Client Management</h2>
+
+  <!-- Form -->
+  <form [formGroup]="clientForm">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" id="name" class="form-control" formControlName="name" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" id="email" class="form-control" formControlName="email" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone</label>
+      <input type="tel" id="phone" class="form-control" formControlName="phone" />
+    </div>
+
+    <!-- Add more fields as needed -->
+
+    <button type="button" class="btn btn-primary" (click)="addClient()">Add Client</button>
+  </form>
+
+  <!-- Table -->
+  <table class="table mt-4">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <!-- Add more columns as needed -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clients; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ client.name }}</td>
+        <td>{{ client.email }}</td>
+        <td>{{ client.phone }}</td>
+        <!-- Add more columns as needed -->
+      </tr>
+    </tbody>
+  </table>
+</div>
