@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './auth-layout/sign-up/sign-up.component';
 import { ClientLayoutComponent } from './client-layout/client-layout.component'; // Assuming you have a client layout
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { NavbarAdComponent } from './admin-layout/navbarAd/navbarAd.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { RecoLayoutComponentComponent } from './reco-layout-component/reco-layout-component.component';
@@ -38,7 +38,7 @@ const routes: Routes = [
     path: 'admin',
     component: AdminLayoutComponent,
     children: [
-      { path: 'dashboard', component: DashboardComponent },
+      { path: 'dashboard', component: NavbarAdComponent },
       // ... other admin panel routes
     ],
   },

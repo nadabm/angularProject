@@ -7,7 +7,6 @@ import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { AppComponent } from './app.component';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { ClientLayoutComponent } from './client-layout/client-layout.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { DestinationLayoutComponent } from './destination-layout/destination-layout.component';
 import { TangerDestComponent } from './destination-layout/tanger-dest/tanger-dest.component';
 import { HomeComponent } from './home/home.component';
@@ -23,6 +22,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthLayoutModule } from './auth-layout/auth-layout.module';
+import { AdminLayoutModule } from './admin-layout/admin-layout.module';
+import { ServiceService } from './service.service';
 
 
 
@@ -30,7 +31,6 @@ import { AuthLayoutModule } from './auth-layout/auth-layout.module';
   declarations: [
     AppComponent,
     HomeComponent,
-    DashboardComponent,
     HeaderComponent,
     FooterComponent,
     ClientLayoutComponent,
@@ -54,9 +54,11 @@ import { AuthLayoutModule } from './auth-layout/auth-layout.module';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
- AuthLayoutModule,
+    AuthLayoutModule,
+    AdminLayoutModule,
     CommonModule
   ],
+  providers: [ServiceService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
