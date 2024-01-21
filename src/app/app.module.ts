@@ -1,14 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './auth-layout/login/login.component';
 import { SignUpComponent } from './auth-layout/sign-up/sign-up.component';
@@ -32,6 +28,7 @@ import { MatchLayoutComponent } from './match-layout/match-layout.component';
 import { MatchesComponent } from './match-layout/matches/matches.component';
 import { TeamsComponent } from './teams/teams.component';
 import { PlayersComponent } from './players/players.component';
+
 
 
 
@@ -71,6 +68,7 @@ import { PlayersComponent } from './players/players.component';
     AppRoutingModule,
     FormsModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

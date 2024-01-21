@@ -29,7 +29,7 @@ const routes: Routes = [
 
   { path: 'teams', component: TeamsComponent },
   { path: 'players/:teamId', component: PlayersComponent },
-  { path: '', redirectTo: '/teams', pathMatch: 'full' },
+
 
   {
     path: '',

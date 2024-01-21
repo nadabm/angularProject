@@ -3,8 +3,9 @@
 <!-- teams.component.html -->
 <!-- teams.component.html -->
 
+
 <div  class="teams-container">
-  <div class="team" (click)="navigateToPlayers(1)" >
+  <div class="team" (click)="navigateToPlayers(1) " *ngFor="let team of teams" (click)="showPlayers(team)" >
 
     <img src="assets/drapeau/Argenti.png" alt="Team 1">
     <p>Argentina
@@ -156,7 +157,7 @@
       (TUN)</p>
   </div>
   <div class="team" (click)="navigateToPlayers(30)">
-    <img src="assets/drapeau/US.jpg" alt="Team 30">
+    <img src="assets/drapeau/US.png" alt="Team 30">
     <p>United States
       (USA)</p>
   </div>

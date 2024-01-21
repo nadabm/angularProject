@@ -1,31 +1,30 @@
 // players.component.ts
 
-import { Component } from '@angular/core';
+// players.component.ts
+
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Player } from './player.model';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-players',
   templateUrl: './players.component.html',
-  styleUrls: ['./players.component.css'],
-  template: `
-  <div *ngFor="let player of players">
-    <img [src]="player.photoUrl" alt="{{ player.name }} Photo" />
-    <p>{{ player.name }}</p>
-    <p>{{ player.position }}</p>
-  </div>
-`,
+  styleUrls: ['./players.component.css']
 })
-export class PlayersComponent {
-  players: Player[] = [
-    { name: 'Joueur 1', photoUrl: 'url1.jpg', position: 'Attaquant' },
-    { name: 'Joueur 2', photoUrl: 'url2.jpg', position: 'Milieu de terrain' },
-    // Ajoutez d'autres joueurs si nécessaire
-  ];
+export class PlayersComponent implements OnInit {
+  players: any[] = [];
 
-  // player.model.ts
+  constructor(private route: ActivatedRoute, private dataService: DataService) {}
 
-// players.component.ts
+  ngOnInit(): void {
+    // Récupérer l'ID de l'équipe à partir de l'URL
+    const teamId = +this.route.snapshot.paramMap.get('id');
+
+    // Charger les joueurs en fonction de l'ID de l'équipe
+    this.players = this.dataService.getPlayers(teamId);
+  }
+}
+
 
 
 
