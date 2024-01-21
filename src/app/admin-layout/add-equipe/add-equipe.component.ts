@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-add-equipe',
@@ -23,6 +23,20 @@ export class AddEquipeComponent {
       playerList: ['']
     });
   }
+    get players() {
+    return this.equipeForm.get('players') as FormArray;
+    }
+    addPlayer(): void {
+    this.players.push(this.fb.group({
+      playerName: [''],
+      playerPosition: ['']
+    }));
+  }
+
+  removePlayer(index: number): void {
+    this.players.removeAt(index);
+  }
+
 
   onSubmit(): void {
     // Add your logic to handle form submission

@@ -13,7 +13,8 @@ body {
 }
 
 .card {
-  width: 400px;
+  width: 500px;
+  /* Adjusted width */
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -25,8 +26,12 @@ body {
   color: #fff;
   padding: 20px;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  /* Increased font size */
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .card-body {
@@ -81,6 +86,18 @@ body {
 
 .btn-primary:hover {
   background-color: #0056b3;
+}
+
+/* Additional Styles for Icon and Date Picker */
+
+.card-header i {
+  margin-right: 10px;
+}
+
+.date-picker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* Add more styles as needed */

@@ -4,13 +4,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from '../app-routing.module';
-import { NavbarAdComponent } from './navbarAd/navbarAd.component';
+import { AddClientComponent } from './add-client/add-client.component';
+import { AdminnavComponent } from './adminnav/adminnav.component';
+import { AddEquipeComponent } from './add-equipe/add-equipe.component';
+import { AddMatchComponent } from './add-match/add-match.component';
 
 
 
 @NgModule({
   declarations: [
-    NavbarAdComponent
+
+    AddClientComponent,
+    AdminnavComponent,
+    AddEquipeComponent,
+    AddMatchComponent
   ],
   imports: [
     CommonModule,
@@ -19,6 +26,10 @@ import { NavbarAdComponent } from './navbarAd/navbarAd.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-  ]
+  ],
+  exports: [AdminnavComponent,
+    AddClientComponent,
+     AddEquipeComponent,
+    AddMatchComponent]
 })
 export class AdminLayoutModule { }

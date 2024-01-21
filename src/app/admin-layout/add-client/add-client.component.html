@@ -1,0 +1,37 @@
+<!-- client.component.html -->
+<div class="content">
+  <div class="dynamic-content-wrapper">
+
+    <div class="container mt-4">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <h2 class="mb-0"><i class="fas fa-users"></i> Clients</h2>
+        </div>
+        <div class="card-body">
+          <div class="table-container">
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let client of clients">
+                  <td>{{ client.name }}</td>
+                  <td>{{ client.email }}</td>
+                  <td>
+                    <button class="btn btn-info btn-sm me-1">Edit</button>
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ServiceService } from 'src/app/service.service';
+
 
 // match.model.ts
 export interface Match {
@@ -11,13 +11,10 @@ export interface Match {
   judgment: string;
 }
 
-
 @NgModule({
   declarations: [],
   imports: [
     CommonModule
-  ],
-  providers: [ServiceService],
-
+  ]
 })
 export class MatchModule { }

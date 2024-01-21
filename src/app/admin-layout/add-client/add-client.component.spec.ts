@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavbarAdComponent } from './navbarAd.component';
+import { AddClientComponent } from './add-client.component';
 
-describe('DashboardComponent', () => {
-  let component: NavbarAdComponent;
-  let fixture: ComponentFixture<NavbarAdComponent>;
+describe('AddClientComponent', () => {
+  let component: AddClientComponent;
+  let fixture: ComponentFixture<AddClientComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [NavbarAdComponent]
+      declarations: [AddClientComponent]
     });
-    fixture = TestBed.createComponent(NavbarAdComponent);
+    fixture = TestBed.createComponent(AddClientComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

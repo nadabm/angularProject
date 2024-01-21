@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ServiceService } from 'src/app/service.service';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { MatchService } from 'src/app/services/match.service';
 import { Match } from './match/match.module';
+import { ServiceService } from 'src/app/service.service';
 
 @Component({
   selector: 'app-add-match',
@@ -9,7 +10,7 @@ import { Match } from './match/match.module';
   styleUrls: ['./add-match.component.css']
 })
 export class AddMatchComponent {
-  matchForm!: FormGroup;
+ matchForm!: FormGroup;
 
   constructor(private fb: FormBuilder, private serviceService: ServiceService) { }
 
@@ -28,9 +29,9 @@ export class AddMatchComponent {
   }
 
   onSubmit(): void {
-  if (this.matchForm.valid) {
-    const matchData: Match = this.matchForm.value as Match;
-    this.serviceService.addMatch(matchData).subscribe(
+    if (this.matchForm.valid) {
+      const matchData: Match = this.matchForm.value as Match;
+      this.serviceService.addMatch(matchData).subscribe(
         (response: any) => {
           console.log('Match added successfully:', response);
           // Optionally, you can redirect or perform additional actions after successful submission.
