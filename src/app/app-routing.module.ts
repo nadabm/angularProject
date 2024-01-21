@@ -9,21 +9,27 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { RecoLayoutComponentComponent } from './reco-layout-component/reco-layout-component.component';
-
 import { DegusterComponent } from './reco-layout-component/deguster/deguster.component';
 import { DestinationLayoutComponent } from './destination-layout/destination-layout.component';
 import { TangerDestComponent } from './destination-layout/tanger-dest/tanger-dest.component';
-
 import { HebergementComponent } from './reco-layout-component/hebergement/hebergement.component';
 import { IdeeDeVoyageComponent } from './reco-layout-component/idee-de-voyage/idee-de-voyage.component';
 import { NatureComponent } from './reco-layout-component/nature/nature.component';
 import { ShoppingComponent } from './reco-layout-component/shopping/shopping.component';
 import { SportComponent } from './reco-layout-component/sport/sport.component';
+import { MatchesComponent } from './match-layout/matches/matches.component';
+import { MatchLayoutComponent } from './match-layout/match-layout.component';
+import { TeamsComponent } from './teams/teams.component';
+import { PlayersComponent } from './players/players.component';
 
 
 
 const routes: Routes = [
 
+
+  { path: 'teams', component: TeamsComponent },
+  { path: 'players/:teamId', component: PlayersComponent },
+  { path: '', redirectTo: '/teams', pathMatch: 'full' },
 
   {
     path: '',
@@ -74,6 +80,20 @@ const routes: Routes = [
 
         ],
       },
+
+      {
+        path: 'match',
+        component: MatchLayoutComponent,
+        children: [
+          { path: 'matches', component: MatchesComponent },
+
+
+        ],
+      },
+
+
+
+
 
 ];
 

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -24,10 +26,12 @@ import { NatureComponent } from './reco-layout-component/nature/nature.component
 import { ShoppingComponent } from './reco-layout-component/shopping/shopping.component';
 import { IdeeDeVoyageComponent } from './reco-layout-component/idee-de-voyage/idee-de-voyage.component';
 import { NavbarComponent } from './reco-layout-component/navbar/navbar.component';
-
-import { MatchesComponent } from './matches/matches.component';
 import { DestinationLayoutComponent } from './destination-layout/destination-layout.component';
 import { TangerDestComponent } from './destination-layout/tanger-dest/tanger-dest.component';
+import { MatchLayoutComponent } from './match-layout/match-layout.component';
+import { MatchesComponent } from './match-layout/matches/matches.component';
+import { TeamsComponent } from './teams/teams.component';
+import { PlayersComponent } from './players/players.component';
 
 
 
@@ -53,10 +57,12 @@ import { TangerDestComponent } from './destination-layout/tanger-dest/tanger-des
 
 
     NavbarComponent,
-    MatchesComponent,
     DestinationLayoutComponent,
-    TangerDestComponent
-
+    TangerDestComponent,
+    MatchLayoutComponent,
+    MatchesComponent,
+    TeamsComponent,
+    PlayersComponent,
   ],
   imports: [
     BrowserModule,
