@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { CommonModule } from '@angular/common';
-
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './auth-layout/login/login.component';
 import { HeaderComponent } from './acceuil/header/header.component';
@@ -22,13 +22,18 @@ import { NatureComponent } from './reco-layout-component/nature/nature.component
 import { ShoppingComponent } from './reco-layout-component/shopping/shopping.component';
 import { IdeeDeVoyageComponent } from './reco-layout-component/idee-de-voyage/idee-de-voyage.component';
 import { NavbarComponent } from './reco-layout-component/navbar/navbar.component';
+
 import { SignUpComponent } from './auth-layout/sign-up/sign-up.component'; // Import SignUpComponent
 
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DestinationLayoutComponent } from './destination-layout/destination-layout.component';
 import { TangerDestComponent } from './destination-layout/tanger-dest/tanger-dest.component';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatchLayoutComponent } from './match-layout/match-layout.component';
+import { MatchesComponent } from './match-layout/matches/matches.component';
+import { TeamsComponent } from './teams/teams.component';
+import { PlayersComponent } from './players/players.component';
+
 
 
 
@@ -52,12 +57,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NatureComponent,
     ShoppingComponent,
     IdeeDeVoyageComponent,
-
+    PlayersComponent,
 
     NavbarComponent,
 
     DestinationLayoutComponent,
-    TangerDestComponent
+    TangerDestComponent,
+    MatchLayoutComponent,
+    MatchesComponent,
+    TeamsComponent,
 
   ],
   imports: [
@@ -68,6 +76,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
 
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

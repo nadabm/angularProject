@@ -1,0 +1,33 @@
+.teams-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.team {
+  width: 200px; /* Ajustez la largeur selon vos besoins */
+  margin: 25px; /* Ajoutez une marge entre les équipes */
+  text-align: center;
+}
+
+.team img {
+  max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur du conteneur */
+}
+.teams-container, .players-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Ajustez selon vos besoins */
+}
+
+.team, .player {
+  width: 120px; /* Ajustez la largeur selon vos besoins */
+  margin: 10px; /* Ajoutez une marge entre les équipes et les joueurs */
+  text-align: center;
+  cursor: pointer; /* Ajoutez un curseur pointer pour indiquer que c'est cliquable */
+}
+
+.team img, .player img {
+  width: 100%; /* Assurez-vous que l'image prend toute la largeur du conteneur */
+  height: auto; /* Maintenez le rapport hauteur/largeur de l'image */
+}
+
