@@ -10,6 +10,7 @@ import { NavigationEnd, Router } from '@angular/router';
 export class AppComponent implements OnInit {
   showHeader = true;
   showFooter = true;
+
     constructor(private router: Router) {
         // Fonction appelée lorsque le bouton est cliqué
 

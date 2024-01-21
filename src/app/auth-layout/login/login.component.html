@@ -1,6 +1,5 @@
-<!-- Section: Design Block -->
 <section>
-  <!-- Jumbotron -->
+
 
   <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
     <div class="container">
@@ -20,35 +19,35 @@
         <div class="col-lg-6 mb-5 mb-lg-0">
           <div class="card">
             <div class="card-body py-5 px-md-5">
-              <div *ngIf="!submitted">
-                <form (ngSubmit)="submitForm()" #loginForm="ngForm">
-                  <!-- Email input -->
-                  <div class="form-outline mb-4">
-                    <input type="email" id="form3Example3" class="form-control" name="email" [(ngModel)]="email"
-                      required />
-                    <label class="form-label" for="form3Example3">Email address</label>
-                  </div>
 
-                  <!-- Password input -->
-                  <div class="form-outline mb-4">
-                    <input type="password" id="form3Example4" class="form-control" name="password"
-                      [(ngModel)]="password" required />
-                    <label class="form-label" for="form3Example4">Password</label>
-                  </div>
+                 <form [formGroup]="formregister">
+                  <!-- Email input -->
+
+<div class="form-outline mb-4">
+  <input type="email" id="form3Example3" class="form-control" formControlName="totp" required />
+  <label class="form-label" for="form3Example3">Email address</label>
+</div>
+
+
+
+<!-- Password input -->
+<div class="form-outline mb-4">
+  <input type="password" id="form3Example4" class="form-control" formControlName="passwordFormControl" />
+  <label class="form-label" for="form3Example4">Password</label>
+</div>
+
 
                   <!-- Checkbox -->
-                  <div class="form-check d-flex justify-content-center mb-4">
-                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-                    <label class="form-check-label" for="form2Example33">Subscribe to our Web App</label>
-                  </div>
-
+<div class="form-check d-flex justify-content-center mb-4">
+  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+  <label class="form-check-label" for="form2Example33">Subscribe to our Web App</label>
+</div>
                   <!-- Submit button -->
-                  <div>
-                    <button type="button" class="btn btn-block mb-4" style="background-color: #8B0000;"
-                      (click)="login()" [disabled]="!loginForm.valid">
-                      Sign in
-                    </button>
-                  </div>
+<div>
+  <button type="submit" class="btn btn-block mb-4" style="background-color: #8B0000;" >
+    Sign in
+  </button>
+</div>
 
                   <!-- Register buttons -->
                   <div class="text-center">
@@ -70,7 +69,7 @@
                     </button>
                   </div>
                 </form>
-              </div>
+
             </div>
           </div>
         </div>

@@ -1,11 +1,10 @@
 // app-routing.module.ts
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './auth-layout/login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './auth-layout/sign-up/sign-up.component';
 import { ClientLayoutComponent } from './client-layout/client-layout.component'; // Assuming you have a client layout
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { NavbarAdComponent } from './admin-layout/navbarAd/navbarAd.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { RecoLayoutComponentComponent } from './reco-layout-component/reco-layout-component.component';
@@ -17,10 +16,14 @@ import { IdeeDeVoyageComponent } from './reco-layout-component/idee-de-voyage/id
 import { NatureComponent } from './reco-layout-component/nature/nature.component';
 import { ShoppingComponent } from './reco-layout-component/shopping/shopping.component';
 import { SportComponent } from './reco-layout-component/sport/sport.component';
+
 import { MatchesComponent } from './match-layout/matches/matches.component';
 import { MatchLayoutComponent } from './match-layout/match-layout.component';
 import { TeamsComponent } from './teams/teams.component';
 import { PlayersComponent } from './players/players.component';
+
+import { LoginComponent } from './auth-layout/login/login.component';
+
 
 
 
@@ -44,7 +47,7 @@ const routes: Routes = [
     path: 'admin',
     component: AdminLayoutComponent,
     children: [
-      { path: 'dashboard', component: DashboardComponent },
+      { path: 'dashboard', component: NavbarAdComponent },
       // ... other admin panel routes
     ],
   },

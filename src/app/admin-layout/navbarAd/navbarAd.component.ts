@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-navbar',
+  templateUrl: './navbarAd.component.html',
+  styleUrls: ['./navbarAd.component.css']
 })
-export class DashboardComponent {
+export class NavbarAdComponent {
   // Add any logic or variables as needed
   isSidebarOpen = false;
 
