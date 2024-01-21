@@ -4,25 +4,37 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './auth-layout/sign-up/sign-up.component';
 import { ClientLayoutComponent } from './client-layout/client-layout.component'; // Assuming you have a client layout
-import { NavbarAdComponent } from './admin-layout/navbarAd/navbarAd.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { RecoLayoutComponentComponent } from './reco-layout-component/reco-layout-component.component';
-
 import { DegusterComponent } from './reco-layout-component/deguster/deguster.component';
 import { DestinationLayoutComponent } from './destination-layout/destination-layout.component';
 import { TangerDestComponent } from './destination-layout/tanger-dest/tanger-dest.component';
-
 import { HebergementComponent } from './reco-layout-component/hebergement/hebergement.component';
 import { IdeeDeVoyageComponent } from './reco-layout-component/idee-de-voyage/idee-de-voyage.component';
 import { NatureComponent } from './reco-layout-component/nature/nature.component';
 import { ShoppingComponent } from './reco-layout-component/shopping/shopping.component';
 import { SportComponent } from './reco-layout-component/sport/sport.component';
+
+import { TeamsComponent } from './teams/teams.component';
+import { PlayersComponent } from './players/players.component';
+
 import { LoginComponent } from './auth-layout/login/login.component';
+import { AddClientComponent } from './admin-layout/add-client/add-client.component';
+import { AdminnavComponent } from './admin-layout/adminnav/adminnav.component';
+import { AddEquipeComponent } from './admin-layout/add-equipe/add-equipe.component';
+import { MatchLayoutComponent } from './match-layout/match-layout.component';
+import { MatchesComponent } from './match-layout/matches/matches.component';
+import { AddMatchComponent } from './admin-layout/add-match/add-match.component';
+
 
 
 
 const routes: Routes = [
+
+
+  { path: 'teams', component: TeamsComponent },
+  { path: 'players/:teamId', component: PlayersComponent },
 
 
   {
@@ -38,8 +50,12 @@ const routes: Routes = [
     path: 'admin',
     component: AdminLayoutComponent,
     children: [
-      { path: 'dashboard', component: NavbarAdComponent },
+      { path: 'dashboard', component: AdminnavComponent },
+      { path: 'Clients', component: AddClientComponent },
+      { path: 'addEquipe', component: AddEquipeComponent },
+      { path: 'Matches', component: AddMatchComponent },
       // ... other admin panel routes
+
     ],
   },
   {
@@ -74,6 +90,20 @@ const routes: Routes = [
 
         ],
       },
+
+      {
+        path: 'match',
+        component: MatchLayoutComponent,
+        children: [
+          { path: 'matches', component: MatchesComponent },
+
+
+        ],
+      },
+
+
+
+
 
 ];
 
