@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -6,8 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-submitForm() {
-throw new Error('Method not implemented.');
-}
+  formregister: FormGroup;
 
+  constructor(private fb: FormBuilder) {
+    this.formregister = this.fb.group({
+      totp: ['', Validators.required],
+      passwordFormControl: ['', Validators.required]
+    });
+  }
 }

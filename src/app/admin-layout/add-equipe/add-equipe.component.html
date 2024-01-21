@@ -1,0 +1,28 @@
+<!-- add-equipe.component.html -->
+<div class="card">
+  <div class="card-header">
+    <h4>Add Equipe</h4>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="equipeForm">
+      <div class="mb-3">
+        <label for="teamName" class="form-label">Team Name</label>
+        <input type="text" class="form-control" id="teamName" formControlName="teamName" required>
+      </div>
+      <div class="mb-3">
+        <label for="teamLogo" class="form-label">Team Logo URL</label>
+        <input type="text" class="form-control" id="teamLogo" formControlName="teamLogo">
+      </div>
+      <div class="mb-3">
+        <label for="teamTrainer" class="form-label">Team Trainer</label>
+        <input type="text" class="form-control" id="teamTrainer" formControlName="teamTrainer">
+      </div>
+      <div class="mb-3">
+        <label for="playerList" class="form-label">Player List</label>
+        <textarea class="form-control" id="playerList" formControlName="playerList"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Team</button>
+    </form>
+  </div>
+</div>
+

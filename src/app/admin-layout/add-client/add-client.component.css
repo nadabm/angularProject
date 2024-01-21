@@ -1,0 +1,40 @@
+/* client.component.css */
+
+.content {
+  padding: 20px;
+}
+
+.dynamic-content-wrapper {
+  margin: 0 auto;
+  max-width: 800px;
+  /* Adjust based on your design preference */
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 15px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 0;
+  /* Remove default table margin */
+}
+
+.btn {
+  cursor: pointer;
+}
+
+/* Optional: Add hover effects for buttons */
+.btn:hover {
+  opacity: 0.8;
+}
