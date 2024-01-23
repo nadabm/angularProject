@@ -35,7 +35,7 @@ const routes: Routes = [
 
   { path: 'teams', component: TeamsComponent },
   { path: 'players/:teamId', component: PlayersComponent },
-  { path: '', redirectTo: '/teams', pathMatch: 'full' },
+
 
   {
     path: '',
@@ -53,7 +53,7 @@ const routes: Routes = [
       { path: 'dashboard', component: AdminnavComponent },
       { path: 'Clients', component: AddClientComponent },
       { path: 'addEquipe', component: AddEquipeComponent },
-      { path: 'Matches', component: AddMatchComponent },
+      { path: 'AddMatches', component: AddMatchComponent },
       // ... other admin panel routes
 
     ],

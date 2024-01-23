@@ -56,12 +56,11 @@ import { ServiceService } from './service.service';
     NavbarComponent,
     DestinationLayoutComponent,
 
+    AuthLayoutComponent,
     MatchLayoutComponent,
     MatchesComponent,
     TeamsComponent,
-
-    AuthLayoutComponent,
-
+    TeamsComponent,
 
 
     TangerDestComponent],
