@@ -1,10 +1,9 @@
 <!-- client.component.html -->
 <div class="content">
   <div class="dynamic-content-wrapper">
-
     <div class="container mt-4">
       <div class="card">
-        <div class="card-header bg-primary text-white">
+        <div class="card-header  text-white">
           <h2 class="mb-0"><i class="fas fa-users"></i> Clients</h2>
         </div>
         <div class="card-body">
@@ -13,17 +12,20 @@
               <thead class="thead-dark">
                 <tr>
                   <th>Name</th>
+                  <th>Prenom</th>
                   <th>Email</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let client of clients">
-                  <td>{{ client.name }}</td>
-                  <td>{{ client.email }}</td>
+                <tr *ngFor="let User of users">
+                  <td>{{ User.nom }}</td>
+                  <td>{{ User.prenom }}</td>
+                  <td>{{ User.email }}</td>
                   <td>
-                    <button class="btn btn-info btn-sm me-1">Edit</button>
-                    <button class="btn btn-danger btn-sm">Delete</button>
+                    <button class="btn btn-info btn-sm me-1"><i class="fas fa-pencil-alt"></i> Edit</button>
+                    <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal"><i
+                        class="fas fa-trash"></i> Delete</button>
                   </td>
                 </tr>
               </tbody>
@@ -32,6 +34,5 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>

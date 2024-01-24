@@ -1,64 +1,88 @@
-/* Reset some default styles */
-body,
-h1,
-h2,
-h3,
-p,
-ul,
-ol,
-li {
-  margin: 0;
-  padding: 0;
-}
+/* add-equipe.component.css */
 
 body {
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f8f8f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
 }
 
 .content {
-  margin: 20px;
-}
-
-.dynamic-content-wrapper {
-  margin: 0 auto;
-  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .card {
+  width: 900px;
   background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: 20px;
+  margin-left: 200px;
+  /* Adjusted margin */
 }
 
 .card-header {
-  background-color: #007bff;
+  background-color: #34495e;
   color: #fff;
-  padding: 10px;
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff;
+  /* Added border */
 }
 
 .card-body {
   padding: 20px;
 }
 
-.table-container {
-  overflow-x: auto;
+.form-group {
+  margin-bottom: 20px;
 }
 
-.table {
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-control {
   width: 100%;
-  margin-bottom: 0;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.btn {
+.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.btn-primary {
+  background-color: #360000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.btn:hover {
-  opacity: 0.8;
+.btn-primary:hover {
+  background-color: #0056b3;
 }
+
+.card-header i {
+  margin-right: 10px;
+}
+
+/* Add more styles as needed */

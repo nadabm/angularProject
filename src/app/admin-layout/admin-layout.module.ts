@@ -8,6 +8,8 @@ import { AddEquipeComponent } from './add-equipe/add-equipe.component';
 import { AddClientComponent } from './add-client/add-client.component';
 import { AdminnavComponent } from './adminnav/adminnav.component';
 import { AddMatchComponent } from './add-match/add-match.component';
+import { VoirEquipeComponent } from './Tables/voir-equipe/voir-equipe.component';
+import { VoirMatchComponent } from './Tables/voir-match/voir-match.component';
 
 
 
@@ -16,7 +18,9 @@ import { AddMatchComponent } from './add-match/add-match.component';
     AddEquipeComponent,
     AddClientComponent,
     AdminnavComponent,
-    AddMatchComponent
+    AddMatchComponent,
+    VoirEquipeComponent,
+    VoirMatchComponent
   ],
   imports: [
     BrowserModule,
@@ -25,9 +29,11 @@ import { AddMatchComponent } from './add-match/add-match.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  exports :[    AddEquipeComponent,
+  exports: [
+    AddEquipeComponent,
     AddClientComponent,
     AdminnavComponent,
-    AddMatchComponent]
+    AddMatchComponent,
+   VoirEquipeComponent]
 })
 export class AdminLayoutModule { }
