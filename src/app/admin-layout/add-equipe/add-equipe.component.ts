@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ServiceService } from 'src/app/service.service';
 
 @Component({
   selector: 'app-add-equipe',
@@ -7,15 +8,10 @@ import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
   styleUrls: ['./add-equipe.component.css']
 })
 export class AddEquipeComponent {
- equipeForm!: FormGroup;
+  equipeForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
-
-  ngOnInit(): void {
-    this.initializeForm();
-  }
-
-  initializeForm(): void {
+  // Inject the service in the constructor
+  constructor(private fb: FormBuilder, private serviceService: ServiceService) {
     this.equipeForm = this.fb.group({
       teamName: ['', Validators.required],
       teamLogo: [''],
@@ -23,24 +19,16 @@ export class AddEquipeComponent {
       playerList: ['']
     });
   }
-    get players() {
-    return this.equipeForm.get('players') as FormArray;
-    }
-    addPlayer(): void {
-    this.players.push(this.fb.group({
-      playerName: [''],
-      playerPosition: ['']
-    }));
-  }
 
-  removePlayer(index: number): void {
-    this.players.removeAt(index);
-  }
+  addEquipe(): void {
+    const equipeData = this.equipeForm.value;
 
+    // Manually add the new equipe to the seed data
+    const newEquipe = { ...equipeData };
+    this.serviceService.equipes.push(newEquipe);
 
-  onSubmit(): void {
-    // Add your logic to handle form submission
-    console.log(this.equipeForm.value);
-    // You can send the form data to a service or perform other actions.
+    // Optional: Clear the form or perform any other necessary actions
+
+    console.log('Equipe added successfully:', newEquipe);
   }
 }

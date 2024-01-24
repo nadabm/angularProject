@@ -1,0 +1,52 @@
+<div class="content">
+  <div class="dynamic-content-wrapper">
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header bg-info text-white">
+              <h2 class="mb-0"><i class="fas fa-chart-bar"></i> Dashboard</h2>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-3" *ngFor="let stat of statistics">
+                  <div class="card stat-card">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ stat.label }}</h5>
+                      <p class="card-text">{{ stat.value }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Add chart component here -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header bg-secondary text-white">
+              <h2 class="mb-0"><i class="fas fa-link"></i> Quick Links</h2>
+            </div>
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item" *ngFor="let link of quickLinks">
+                  <i class="{{ link.icon }}"></i> <a [routerLink]="link.link">{{ link.title }}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card mt-4">
+            <div class="card-header bg-secondary text-white">
+              <h2 class="mb-0"><i class="fas fa-history"></i> Recent Activity</h2>
+            </div>
+            <div class="card-body">
+              <div *ngFor="let activity of recentActivity" class="activity-item">
+                <p>{{ activity.user }} {{ activity.action }} <span class="timestamp">{{ activity.timestamp }}</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

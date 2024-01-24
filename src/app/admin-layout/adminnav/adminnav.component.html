@@ -14,26 +14,36 @@
       </div>
     </div>
     <ul class="navbar-nav w-100">
-      <li routerLink="/Clients" class="nav-item">
-        <a  routerLink="/Clients" class="nav-link"><i class="fas fa-users"></i> Clients Management</a>
+      <li routerLink="/admin/Clients" class="nav-item">
+        <a  routerLink="/admin/Clients" class="nav-link"><i class="fas fa-users"></i> Client Management</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fas fa-futbol"></i>
-Match</a>
+Match Management</a>
         <div class="dropdown-menu bg-transparent border-0">
           <ul class="list-unstyled">
-            <li routerLink="/addEquipe" class="dropdown-item"><a class="dropdown-link">Add Equipe</a></li>
-            <li routerLink="/Matches" class="dropdown-item"><a class="dropdown-link">Add match</a></li>
-            <li routerLink="/dashboard" class="dropdown-item"><a class="dropdown-link">Other Elements</a></li>
+            <li routerLink="/admin/addEquipe" class="dropdown-item"><a class="dropdown-link">Add Equipe</a></li>
+            <li routerLink="/admin/AddMatches" class="dropdown-item"><a class="dropdown-link">Add match</a></li>
+            <li routerLink="/admin/dashboard" class="dropdown-item"><a class="dropdown-link">Other Elements</a></li>
           </ul>
         </div>
       </li>
-      <li routerLink="/dashboard" class="nav-item"><a class="nav-link"><i class="fa fa-th me-2"></i>Widgets</a></li>
-      <li routerLink="/dashboard" class="nav-item"><a class="nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a></li>
-      <li routerLink="/dashboard" class="nav-item"><a class="nav-link"><i class="fa fa-table me-2"></i>Tables</a></li>
-      <li routerLink="/dashboard" class="nav-item"><a class="nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fas fa-table"></i>&nbsp;Tables</a>
+              <div class="dropdown-menu bg-transparent border-0">
+                <ul class="list-unstyled">
+                  <li routerLink="/admin/voirEquipe" class="dropdown-item"><a class="dropdown-link"> Equipes</a></li>
+                  <li routerLink="/admin/voirMatch" class="dropdown-item"><a class="dropdown-link">Matches</a></li>
+                  <li routerLink="/admin/dashboard" class="dropdown-item"><a class="dropdown-link">Players</a></li>
+                </ul>
+              </div>
+            </li>
+      <li routerLink="/admin/addDest" class="nav-item"><a class="nav-link"><i class="fa fa-th me-2"></i>Destination Manage</a></li>
+      <li routerLink="/dashboard" class="nav-item"><a class="nav-link"><i class="fa fa-keyboard me-2"></i>roles management</a></li>
+      <li routerLink="/" class="nav-item"><a class="nav-link"><i class="fas fa-sign-out-alt"></i> &nbsp;log Out</a>
       </li>
-      <li class="nav-item dropdown">
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
         <div class="dropdown-menu bg-transparent border-0">
           <a routerLink="/dashboard" class="dropdown-item">Sign In</a>
@@ -41,7 +51,7 @@ Match</a>
           <a routerLink="/dashboard" class="dropdown-item">404 Error</a>
           <a routerLink="/dashboard" class="dropdown-item">Blank Page</a>
         </div>
-      </li>
+      </li> -->
     </ul>
   </nav>
 </div>

@@ -1,17 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddEquipeComponent } from './add-equipe.component';
+import { VoirMatchComponent } from './voir-match.component';
 
-describe('AddEquipeComponent', () => {
-  let component: AddEquipeComponent;
-  let fixture: ComponentFixture<AddEquipeComponent>;
+describe('VoirMatchComponent', () => {
+  let component: VoirMatchComponent;
+  let fixture: ComponentFixture<VoirMatchComponent>;
 
   beforeEach(() => {
-
     TestBed.configureTestingModule({
-      declarations: [AddEquipeComponent]
+      declarations: [VoirMatchComponent]
     });
-    fixture = TestBed.createComponent(AddEquipeComponent);
+    fixture = TestBed.createComponent(VoirMatchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
