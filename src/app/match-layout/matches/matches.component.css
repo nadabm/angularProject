@@ -1,45 +1,34 @@
+
 /* matches.component.css */
 
-.match-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border: 1px solid #ccc;
-  margin: 10px;
-  padding: 10px;
-}
-
-.team {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.vs {
-  font-weight: bold;
-}
-
-.group {
-  margin-top: 10px;
-}
-/* app.component.css */
-
 .card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.flag {
+.card-body {
+  padding: 20px;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Ajoutez un style spécifique pour l'en-tête h2 */
+h2 {
+  color: #007bff; /* Couleur bleue Bootstrap par défaut */
+}
+
+/* Style pour l'image du drapeau */
+img.flag {
   width: 30px;
   height: 20px;
   margin-right: 8px;
 }
 
-.team-name {
-  font-weight: bold;
-}
-
-.score {
-  font-size: 1.2em;
-  color: #007bff; /* Couleur de police pour le score (bleu dans cet exemple) */
+/* Ajoutez une couleur de fond pour les colonnes */
+.col-md-6 {
+  background-color: #f8f9fa; /* Couleur de fond Bootstrap par défaut */
+  padding: 10px;
 }
