@@ -38,4 +38,8 @@
 .mb-3 {
   margin-bottom: 1rem; /* Espacement entre les cards */
 }
-
+.card-img-top {
+  width: 100%;     /* Réduire la largeur à 100% de la largeur parente */
+  height: 200px;   /* Définir une hauteur fixe en pixels */
+  object-fit: cover; /* Redimensionner l'image tout en conservant son ratio */
+}
