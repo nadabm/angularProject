@@ -12,15 +12,15 @@
           <form [formGroup]="matchForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
               <label for="equipe1" class="form-label"><i class="fas fa-users"></i> Equipe 1</label>
-              <select class="form-select" id="equipe1" formControlName="equipe1" required>
+              <input class="form-select" id="equipe1" formControlName="equipe1" required>
                 <!-- Populate this dropdown with equipe names -->
-              </select>
+
             </div>
             <div class="form-group">
               <label for="equipe2" class="form-label"><i class="fas fa-users"></i> Equipe 2</label>
-              <select class="form-select" id="equipe2" formControlName="equipe2" required>
+              <input class="form-select" id="equipe2" formControlName="equipe2" required>
                 <!-- Populate this dropdown with equipe names -->
-              </select>
+
             </div>
             <div class="form-group">
               <label for="dateTime" class="form-label"><i class="far fa-calendar-alt"></i> Date and Time</label>

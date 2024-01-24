@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Match } from '../../add-match/match/match.module';
 import { ServiceService } from 'src/app/service.service';
+import { Match } from '../add-match/match/match.module';
 
 @Component({
   selector: 'app-voir-match',

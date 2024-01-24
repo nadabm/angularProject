@@ -35,14 +35,17 @@ addEquipe(): void {
 }
 
   updateEquipe(equipe: Equipe): void {
-    this.serviceService.updateEquipe(equipe).subscribe(() => {
+    this.serviceService['updateEquipe'](equipe).subscribe(() => {
       this.getEquipes();
     });
   }
 
-  deleteEquipe(teamName: string): void {
-    this.serviceService.deleteEquipe(teamName).subscribe(() => {
-      this.getEquipes();
-    });
-  }
+deleteEquipe(teamName: string): void {
+  // Update the local array without making an API call
+  this.equipes = this.equipes.filter(equipe => equipe.teamName !== teamName);
+}
+
+
+
+
 }
