@@ -57,8 +57,10 @@ const routes: Routes = [
       { path: 'Clients', component: AddClientComponent },
       { path: 'addEquipe', component: AddEquipeComponent },
       { path: 'AddMatches', component: AddMatchComponent },
+
       { path: 'voirEquipe', component: VoirEquipeComponent },
       { path: 'voirMatch', component: VoirMatchComponent },
+
       // ... other admin panel routes
 
     ],
