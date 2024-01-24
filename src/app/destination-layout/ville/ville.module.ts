@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-export interface User{
+export interface Ville{
   id: string;
-  nom: string;
-  prenom: string;
-  email: string;
-  password: string;
-
+  descreption: string;
+  photo: BinaryType;
 }
-
 
 @NgModule({
   declarations: [],
@@ -17,6 +13,4 @@ export interface User{
     CommonModule
   ]
 })
-export class ClientModule {
-
- }
+export class VilleModule { }

@@ -1,0 +1,47 @@
+<!-- voir-equipe.component.html -->
+<div class="content">
+  <div class="dynamic-content-wrapper">
+    <div class="container mt-4">
+  <div class="card">
+    <div class="card-header  text-white">
+      <h2 class="mb-0"><i class="fas fa-table"></i> Equipes</h2>
+    </div>
+    <div class="card-body">
+      <div class="table-container">
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th>Team Name</th>
+              <th>Team Logo</th>
+              <th>Team Trainer</th>
+              <th>Player List</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let equipe of equipes">
+              <td>{{ equipe.teamName }}</td>
+              <td><img [src]="equipe.teamLogo" alt="Team Logo" class="team-logo"></td>
+              <td>{{ equipe.teamTrainer }}</td>
+              <td>{{ equipe.playerList }}</td>
+              <td>
+                <button class="btn btn-info btn-sm me-1" (click)="updateEquipe(equipe)">
+                  <i class="fas fa-pencil-alt"></i> Edit
+                </button>
+                <button class="btn btn-danger btn-sm" (click)="deleteEquipe(equipe.teamName)">
+                  <i class="fas fa-trash"></i> Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <button class="btn btn-success mt-3" routerLink="/admin/addEquipe">
+        <i class="fas fa-plus"></i> Add Equipe
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,42 @@
+<div class="content">
+  <div class="dynamic-content-wrapper">
+    <div class="container mt-4">
+      <div class="card">
+        <div class="card-header">
+          <i class="fas fa-compass"></i>
+          <h4>Add Destination</h4>
+          <i class="fas fa-compass"></i>
+        </div>
+        <div class="card-body">
+          <form (submit)="addNewDestination()">
+            <div class="form-group">
+              <label for="title" class="form-label"><i class="fas fa-heading"></i> Title</label>
+              <input type="text" class="form-control" id="title" [(ngModel)]="newDestination.title" required>
+            </div>
+            <div class="form-group">
+              <label for="description" class="form-label"><i class="fas fa-file-alt"></i> Description</label>
+              <textarea class="form-control" id="description" [(ngModel)]="newDestination.description"
+                required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="photo" class="form-label"><i class="fas fa-image"></i> Photo URL</label>
+              <input type="text" class="form-control" id="photo" [(ngModel)]="newDestination.photo" required>
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> Add Destination</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Display destinations -->
+      <div *ngFor="let destination of destinations" class="card mt-4">
+        <div class="card-body">
+          <h5 class="card-title">{{ destination.title }}</h5>
+          <p class="card-text">{{ destination.description }}</p>
+          <img [src]="destination.photo" alt="{{ destination.title }}" class="img-fluid">
+          <button (click)="updateDestination(destination)" class="btn btn-warning">Update</button>
+          <button (click)="deleteDestination(destination.id)" class="btn btn-danger">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

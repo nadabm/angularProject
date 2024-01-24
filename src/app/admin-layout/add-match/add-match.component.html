@@ -4,39 +4,55 @@
     <div class="container mt-4">
       <div class="card">
         <div class="card-header">
+          <i class="fas fa-futbol"></i>
           <h4>Add Match</h4>
+          <i class="fas fa-futbol"></i>
         </div>
         <div class="card-body">
           <form [formGroup]="matchForm" (ngSubmit)="onSubmit()">
-            <div class="mb-3">
-              <label for="equipe1" class="form-label">Equipe 1</label>
-              <select class="form-select" id="equipe1" formControlName="equipe1" required>
+            <div class="form-group">
+              <label for="equipe1" class="form-label"><i class="fas fa-users"></i> Equipe 1</label>
+              <input class="form-select" id="equipe1" formControlName="equipe1" required>
                 <!-- Populate this dropdown with equipe names -->
-              </select>
+
             </div>
-            <div class="mb-3">
-              <label for="equipe2" class="form-label">Equipe 2</label>
-              <select class="form-select" id="equipe2" formControlName="equipe2" required>
+            <div class="form-group">
+              <label for="equipe2" class="form-label"><i class="fas fa-users"></i> Equipe 2</label>
+              <input class="form-select" id="equipe2" formControlName="equipe2" required>
                 <!-- Populate this dropdown with equipe names -->
-              </select>
+
             </div>
-            <div class="mb-3">
-              <label for="hour" class="form-label">Hour</label>
-              <input type="text" class="form-control" id="hour" formControlName="hour" required>
+            <div class="form-group">
+              <label for="dateTime" class="form-label"><i class="far fa-calendar-alt"></i> Date and Time</label>
+              <input type="datetime-local" class="form-control" id="dateTime" formControlName="dateTime" required>
             </div>
-            <div class="mb-3">
-              <label for="stadium" class="form-label">Stadium</label>
-              <input type="text" class="form-control" id="stadium" formControlName="stadium" required>
+            <div class="form-group">
+              <label for="stade" class="form-label"><i class="fas fa-stadium"></i> Stadium</label>
+              <input type="text" class="form-control" id="stade" formControlName="stade" required>
             </div>
-            <div class="mb-3">
-              <label for="judgment" class="form-label">Judgment</label>
-              <input type="text" class="form-control" id="judgment" formControlName="judgment" required>
+            <div class="form-group">
+              <label for="statut" class="form-label"><i class="fas fa-gavel"></i> Match statut</label>
+              <input type="text" class="form-control" id="statut" formControlName="statut" required>
             </div>
-            <button type="submit" class="btn btn-primary">Add Match</button>
+            <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> Add Match</button>
           </form>
         </div>
+                  <!-- <div *ngFor="let match of matches">
+                    <div class="card mt-3">
+                      <div class="card-body">
+                        <h5 class="card-title">Match Info</h5>
+                        <ul class="list-group">
+                          <li class="list-group-item"><strong>Equipe 1:</strong> {{ match.equipe1 }}</li>
+                          <li class="list-group-item"><strong>Equipe 2:</strong> {{ match.equipe2 }}</li>
+                          <li class="list-group-item"><strong>Date and Time:</strong> {{ match.dateTime | date:'medium' }}</li>
+                          <li class="list-group-item"><strong>Stadium:</strong> {{ match.stade }}</li>
+                          <li class="list-group-item"><strong>Match Statut:</strong> {{ match.statut }}</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div> -->
+                  </div>
       </div>
     </div>
   </div>
-</div>
 

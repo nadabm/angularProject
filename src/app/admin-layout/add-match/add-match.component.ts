@@ -11,6 +11,7 @@ import { ServiceService } from 'src/app/service.service';
 })
 export class AddMatchComponent {
  matchForm!: FormGroup;
+matches: any;
 
   constructor(private fb: FormBuilder, private serviceService: ServiceService) { }
 
@@ -22,16 +23,16 @@ export class AddMatchComponent {
     this.matchForm = this.fb.group({
       equipe1: ['', Validators.required],
       equipe2: ['', Validators.required],
-      hour: ['', Validators.required],
-      stadium: ['', Validators.required],
-      judgment: ['', Validators.required],
+      dateTime: ['', Validators.required],
+      stade: ['', Validators.required],
+      statut: ['', Validators.required],
     });
   }
 
   onSubmit(): void {
     if (this.matchForm.valid) {
       const matchData: Match = this.matchForm.value as Match;
-      this.serviceService.addMatch(matchData).subscribe(
+      this.serviceService.createMatch(matchData).subscribe(
         (response: any) => {
           console.log('Match added successfully:', response);
           // Optionally, you can redirect or perform additional actions after successful submission.

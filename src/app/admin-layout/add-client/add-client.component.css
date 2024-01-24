@@ -2,6 +2,8 @@
 
 .content {
   padding: 20px;
+  padding: 20px;
+  margin-left: 100px;
 }
 
 .dynamic-content-wrapper {
@@ -17,7 +19,17 @@
 }
 
 .card-header {
-  padding: 15px;
+  background-color: #34495e;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff;
+  /* Added border */
 }
 
 .table-container {
@@ -33,7 +45,16 @@
 .btn {
   cursor: pointer;
 }
-
+.btn-primary {
+  background-color: #360000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
 /* Optional: Add hover effects for buttons */
 .btn:hover {
   opacity: 0.8;

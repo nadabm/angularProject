@@ -1,0 +1,66 @@
+<!-- voir-match.component.html -->
+<br>
+<div class="content">
+  <div class="dynamic-content-wrapper">
+    <div class="container mt-4">
+      <div class="card">
+        <div class="card-header  text-white">
+          <i class="fas fa-calendar-alt mr-2"></i>
+          <h4 class="d-inline-block">Match Schedule</h4>
+          <i class="fas fa-calendar-alt ml-2"></i>
+        </div>
+        <div class="card-body">
+          <div class="mt-3">
+            <!-- Button to navigate to edit-match component with the match ID -->
+            <a routerLink="/admin/AddMatches" class="btn btn-secondary btn-modify">
+              <i class="fas fa-add"></i> Add
+            </a>
+          </div>
+          <div *ngFor="let match of matches">
+            <div class="card mt-3">
+              <div class="card-body">
+                <h5 class="card-title">Match Info</h5>
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul class="list-group">
+                      <li class="list-group-item team-info">
+                        <strong>Equipe 1:</strong> {{ match.equipe1.teamName }} ({{ match.equipe1.teamTrainer }})
+                      </li>
+                      <li class="list-group-item date-info">
+                        <strong>Date and Time:</strong> {{ match.dateTime | date:'medium' }}
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="list-group">
+                      <li class="list-group-item team-info">
+                        <strong>Equipe 2:</strong> {{ match.equipe2.teamName }} ({{ match.equipe2.teamTrainer }})
+                      </li>
+                      <li class="list-group-item stadium-info">
+                        <strong>Stadium:</strong> {{ match.stade }}
+                      </li>
+                      <li class="list-group-item status-info">
+                        <strong>Match Status:</strong> {{ match.statut }}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <!-- Button to navigate to edit-match component with the match ID -->
+                  <a  class="btn btn-warning btn-modify">
+                    <i class="fas fa-edit"></i> Modify
+                  </a>
+                  &nbsp;
+                  <!-- Button to trigger deleteMatch method -->
+                  <button (click)="deleteMatch(match.matchId)" class="btn btn-danger btn-delete">
+                    <i class="fas fa-trash"></i> Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
