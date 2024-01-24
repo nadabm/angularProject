@@ -27,7 +27,10 @@ import { MatchLayoutComponent } from './match-layout/match-layout.component';
 import { MatchesComponent } from './match-layout/matches/matches.component';
 import { AddMatchComponent } from './admin-layout/add-match/add-match.component';
 import { VoirEquipeComponent } from './admin-layout/Tables/voir-equipe/voir-equipe.component';
-import { VoirMatchComponent } from './admin-layout/Tables/voir-match/voir-match.component';
+import { AddDestinationComponent } from './admin-layout/add-destination/add-destination.component';
+import { AdminPageComponent } from './admin-layout/admin-page/admin-page.component';
+import { VoirMatchComponent } from './admin-layout/voir-match/voir-match.component';
+
 
 
 
@@ -58,6 +61,9 @@ const routes: Routes = [
       { path: 'AddMatches', component: AddMatchComponent },
       { path: 'voirEquipe', component: VoirEquipeComponent },
       { path: 'voirMatch', component: VoirMatchComponent },
+      { path: 'addDest', component: AddDestinationComponent },
+      { path: '', component: AdminPageComponent },
+
       // ... other admin panel routes
 
     ],

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, map, of, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { Observable, map, merge, of, throwError } from 'rxjs';
+import { catchError, tap } from 'rxjs/operators';
 
 import { Match } from './admin-layout/add-match/match/match.module';
 import { Equipe } from './admin-layout/add-equipe/equipe/equipe.module';
@@ -11,22 +11,35 @@ import { User } from './admin-layout/add-client/client/client.module';
   providedIn: 'root'
 })
 export class ServiceService {
+  [x: string]: any;
  equipes: any[] = [];
   // Seed data for initial equipes
   private seedEquipes: Equipe[] = [
     { teamName: 'Morocco', teamLogo: 'assets/moroccoFlag.png', teamTrainer: 'Regragui walid', playerList: 'Achraf Hakimi, Hakim Ziyech' },
     { teamName: 'Portugal', teamLogo: 'assets/portugal.png', teamTrainer: 'Roberto Martinez', playerList: 'Raphaël Guerreiro, Cristiano Ronaldo (captain)' },
     { teamName: 'spain', teamLogo: 'assets/spain.png', teamTrainer: ' Luis de la Fuente', playerList: '	Dani Carvajal' },
+    { teamName: 'italy', teamLogo: 'assets/italy.png', teamTrainer: '  Luciano Spalletti', playerList: 'Gianluigi Donnarumma (captain)' },
+    { teamName: 'croatia', teamLogo: 'assets/croatia.png', teamTrainer: ' Luis de Zlatko ', playerList: '	Dani Carvajal' },
+  ];
+
+    seedUsers: User[] = [
+    { id: '1', nom: 'John', prenom: 'Doe', email: 'john.doe@example.com', password: ''},
+    { id: '2', nom: 'Jane', prenom: 'Smith', email: 'jane.smith@example.com' , password:''},
+    { id: '3', nom: 'Alice', prenom: 'Johnson', email: 'alice.johnson@example.com' , password:''},
+    // Add more users as needed
   ];
   getPlayers(teamId: number): any[] {
     throw new Error('Method not implemented.');
   }
-private apiUrl = 'http://your-api-url'; // Replace with your MongoDB API URL
+private apiUrl = 'http://192.168.0.119:8080/api/v1/football'; // Replace with your MongoDB API URL
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+
+      this.equipes = [...this.seedEquipes];
+  }
 
 getAllUsers(): Observable<User[]> {
-  return this.http.get<User[]>(`${this.apiUrl}/clients`)
+  return this.http.get<User[]>(`${this.apiUrl}/users`)
     .pipe(
       catchError((error) => {
         console.error('Error fetching clients:', error);
@@ -35,7 +48,6 @@ getAllUsers(): Observable<User[]> {
       })
     );
 }
-
   getUserById(id: string): Observable<User> {
     return this.http.get<User>(`${this.apiUrl}/clients/${id}`);
   }
@@ -44,16 +56,49 @@ getAllUsers(): Observable<User[]> {
     return this.http.post<User>(`${this.apiUrl}/clients`, User);
   }
 
-  updateUser(id: string, User: User): Observable<User> {
-    return this.http.put<User>(`${this.apiUrl}/clients/${id}`, User);
-  }
+  // updateUser(id: string): Observable<User> {
+  //   return this.http.put<User>(`${this.apiUrl}/clients/${id}`);
+  // }
 
-  deleteUser(id: string): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/clients/${id}`);
+ deleteUser(id: string): Observable<void> {
+    // Assuming this method triggers an API call, update it to handle the deletion from seed data as well
+    const url = `${this.apiUrl}/users/${id}`;
+
+    // Make the API call
+    const apiCall = this.http.delete<void>(url);
+
+    // Handle the deletion from seed data as well
+    const seedDataUpdate = apiCall.pipe(
+      tap(() => {
+        // Update the seedUsers array by removing the user with the specified id
+        this.seedUsers = this.seedUsers.filter(user => user.id !== id);
+      }),
+      catchError(() => {
+        // Handle errors if necessary, for now, just return an empty observable
+        return of();
+      })
+    );
+
+    // Return the merged observable
+    return merge(apiCall, seedDataUpdate);
   }
   //---------------------------------------equipe adminn-------------//
   addEquipe(equipe: Equipe): Observable<void> {
-    return this.http.post<void>(this.apiUrl, equipe);
+    const apiCall = this.http.post<void>(this.apiUrl, equipe);
+
+    // Handle the addition to seed data as well
+    const seedDataUpdate = apiCall.pipe(
+      tap(() => {
+        this.seedEquipes = [...this.seedEquipes, equipe];
+      }),
+      catchError(() => {
+        // Handle errors if necessary, for now, just return an empty observable
+        return of();
+      })
+    );
+
+    // Return the merged observable
+    return merge(apiCall, seedDataUpdate);
   }
   //-------------------------------voir Equipe--------------------------------//
   //getEquipes(): void {
@@ -78,15 +123,30 @@ getAllUsers(): Observable<User[]> {
 
 
 
-  updateEquipe(equipe: Equipe): Observable<void> {
-    const url = `${this.apiUrl}/${equipe.teamName}`;
-    return this.http.put<void>(url, equipe);
-  }
+  // updateEquipe(equipe: Equipe): Observable<void> {
+  //   const url = `${this.apiUrl}/${equipe.teamName}`;
+  //   return this.http.put<void>(url, equipe);
+  // }
 
-  deleteEquipe(teamName: string): Observable<void> {
-    const url = `${this.apiUrl}/${teamName}`;
-    return this.http.delete<void>(url);
-  }
+deleteEquipe(teamName: string): Observable<void> {
+  const url = `${this.apiUrl}/${teamName}`;
+
+  // Make the API call
+  const apiCall = this.http.delete<void>(url);
+
+  // Handle the deletion from seed data as well
+  return apiCall.pipe(
+    tap(() => {
+      // Update the seedEquipes array by removing the equipe with the specified teamName
+      this.seedEquipes = this.seedEquipes.filter(equipe => equipe.teamName !== teamName);
+    }),
+    catchError(() => {
+      // Handle errors if necessary, for now, just return an empty observable
+      return of();
+    })
+  );
+}
+
   //------------------add-match---------------------------------//
    getAllMatches(): Observable<Match[]> {
     return this.http.get<Match[]>(`${this.apiUrl}/matches`);
@@ -110,4 +170,31 @@ deleteMatch(matchId: string): Observable<void> {
       })
     );
 }
+  //------------------------login handling -----------------------------------------------------//
+  // Simulated user data
+  private adminUser = { username: 'admin', password: 'admin' };
+  private clientUser = { username: 'client', password: 'client' };
+
+  login(username: string, password: string): Observable<boolean> {
+    // Simulate server-side authentication
+
+  console.log('Attempting login with:', username, password);
+    if ((username === this.adminUser.username && password === this.adminUser.password) ||
+        (username === this.clientUser.username && password === this.clientUser.password)) {
+      localStorage.setItem('currentUser', JSON.stringify({ username }));
+      return of(true);
+    } else {
+     console.log('Authentication failed');
+  return of(false);
+    }
+  }
+
+  logout(): void {
+    localStorage.removeItem('currentUser');
+  }
+
+  getCurrentUser(): any {
+    const currentUser = localStorage.getItem('currentUser');
+    return currentUser ? JSON.parse(currentUser) : null;
+  }
 }
