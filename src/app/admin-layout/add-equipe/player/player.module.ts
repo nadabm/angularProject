@@ -4,9 +4,7 @@ import { CommonModule } from '@angular/common';
 export interface Player {
   playerName: string;
   playerPosition: string;
-
 }
-
 
 
 

@@ -9,7 +9,9 @@ import { AddClientComponent } from './add-client/add-client.component';
 import { AdminnavComponent } from './adminnav/adminnav.component';
 import { AddMatchComponent } from './add-match/add-match.component';
 import { VoirEquipeComponent } from './Tables/voir-equipe/voir-equipe.component';
-import { VoirMatchComponent } from './Tables/voir-match/voir-match.component';
+import { VoirMatchComponent } from './voir-match/voir-match.component';
+import { AddDestinationComponent } from './add-destination/add-destination.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
 
 
 
@@ -20,7 +22,9 @@ import { VoirMatchComponent } from './Tables/voir-match/voir-match.component';
     AdminnavComponent,
     AddMatchComponent,
     VoirEquipeComponent,
-    VoirMatchComponent
+    VoirMatchComponent,
+    AddDestinationComponent,
+    AdminPageComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,8 @@ import { VoirMatchComponent } from './Tables/voir-match/voir-match.component';
     AddClientComponent,
     AdminnavComponent,
     AddMatchComponent,
-   VoirEquipeComponent]
+    VoirEquipeComponent,
+   AddDestinationComponent]
 })
 export class AdminLayoutModule { }
 

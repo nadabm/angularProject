@@ -7,7 +7,9 @@ export interface User{
   prenom: string;
   email: string;
   password: string;
+
 }
+
 
 @NgModule({
   declarations: [],
@@ -15,4 +17,6 @@ export interface User{
     CommonModule
   ]
 })
-export class ClientModule { }
+export class ClientModule {
+
+ }
