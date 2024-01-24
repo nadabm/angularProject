@@ -30,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthLayoutModule } from './auth-layout/auth-layout.module';
 import { AdminLayoutModule } from './admin-layout/admin-layout.module';
 import { ServiceService } from './service.service';
+import { MatchesService } from './match-layout/matches/matches.service';
 
 
 
@@ -56,12 +57,11 @@ import { ServiceService } from './service.service';
     NavbarComponent,
     DestinationLayoutComponent,
 
+    AuthLayoutComponent,
     MatchLayoutComponent,
     MatchesComponent,
     TeamsComponent,
-
-    AuthLayoutComponent,
-
+    TeamsComponent,
 
 
     TangerDestComponent],
@@ -75,7 +75,7 @@ import { ServiceService } from './service.service';
     AdminLayoutModule,
     CommonModule
   ],
-  providers: [ServiceService],
+  providers: [MatchesService],
   bootstrap: [AppComponent],
 
 })

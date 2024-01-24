@@ -1,4 +1,127 @@
-<p>players works!</p>
+
+<!-- player.component.html -->
+
+<div class="row">
+  <h2>  Goalkeeper </h2>
+  <div class="col-md-3 mb-3" *ngFor="let card of cardsData">
+    <div class="card" style="width: 18rem;">
+      <!-- Contenu de la card -->
+      <img class="card-img-top" [src]="card.imageUrl" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">  Goalkeeper </h5>
+        <p class="card-text">{{ card.text }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <h2> Defender </h2>
+  <div class="col-md-3 mb-3" *ngFor="let index of [1, 2, 3, 4]">
+    <div class="card" style="width: 18rem;">
+      <!-- Contenu de la card -->
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title {{ index }}</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+
+  <div class="col-md-3 mb-3" *ngFor="let index of [1, 2, 3, 4]">
+    <div class="card" style="width: 18rem;">
+      <!-- Contenu de la card -->
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title {{ index }}</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <h2> Midfielder </h2>
+  <div class="col-md-3 mb-3" *ngFor="let index of [1, 2, 3, 4]">
+    <div class="card" style="width: 18rem;">
+      <!-- Contenu de la card -->
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title {{ index }}</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-md-3 mb-3" *ngFor="let index of [1, 2, 3, 4]">
+    <div class="card" style="width: 18rem;">
+      <!-- Contenu de la card -->
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title {{ index }}</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3 mb-3" *ngFor="let index of [1, 2]">
+    <div class="card" style="width: 18rem;">
+      <!-- Contenu de la card -->
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title {{ index }}</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <h2> Forward </h2>
+  <div class="col-md-3 mb-3" *ngFor="let index of [1, 2, 3, 4,5]">
+    <div class="card" style="width: 18rem;">
+      <!-- Contenu de la card -->
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title {{ index }}</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <h2> Manager </h2>
+  <div class="col-md-3 mb-3" >
+    <div class="card" style="width: 18rem;">
+      <!-- Contenu de la card -->
+      <img class="card-img-top" src="/assets/photosdesjoueurs/regragui.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Manager </h5>
+        <p class="card-text"> walid regragui </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
 <!-- players-list.component.html -->
 
 <!-- players.component.html -->
@@ -8,3 +131,5 @@
   <p>{{ player.name }}</p>
   <p>{{ player.position }}</p>
 </div>
+
+

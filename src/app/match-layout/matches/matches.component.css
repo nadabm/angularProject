@@ -1,0 +1,45 @@
+/* matches.component.css */
+
+.match-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vs {
+  font-weight: bold;
+}
+
+.group {
+  margin-top: 10px;
+}
+/* app.component.css */
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.flag {
+  width: 30px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.team-name {
+  font-weight: bold;
+}
+
+.score {
+  font-size: 1.2em;
+  color: #007bff; /* Couleur de police pour le score (bleu dans cet exemple) */
+}
