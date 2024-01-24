@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Client } from './client/client.module';
 import { ServiceService } from 'src/app/service.service';
+import { User } from './client/client.module';
 
 @Component({
   selector: 'app-add-client',
@@ -8,7 +8,7 @@ import { ServiceService } from 'src/app/service.service';
   styleUrls: ['./add-client.component.css']
 })
 export class AddClientComponent {
-  clients: Client[] = [];
+  users: User[] = [];
 
   constructor(private serviceService: ServiceService) {} // Use proper naming conventions
 
@@ -17,16 +17,10 @@ export class AddClientComponent {
   }
 
   loadClients(): void {
-    this.serviceService.getClients().subscribe((clients: Client[]) => {
-      this.clients = clients;
+    this.serviceService.getAllUsers().subscribe((users: User[]) => {
+      this.users = users;
     });
   }
-    editClient(client: Client): void {
-    // Implement edit functionality using this.clientService.updateClient(client._id, updatedClient);
-  }
 
-  deleteClient(client: Client): void {
-    // Implement delete functionality using this.clientService.deleteClient(client._id)
-  }
 
 }

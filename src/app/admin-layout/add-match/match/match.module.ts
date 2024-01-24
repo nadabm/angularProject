@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Equipe } from '../../add-equipe/equipe/equipe.module';
 
 
 // match.model.ts
 export interface Match {
-  equipe1: string;
-  equipe2: string;
-  hour: string;
-  stadium: string;
-  judgment: string;
+  matchId: string;
+  equipe1: Equipe;
+  equipe2: Equipe;
+  dateTime: Date;
+  stade: string;
+  statut: string;
+  // judgment: string;
 }
 
 @NgModule({
