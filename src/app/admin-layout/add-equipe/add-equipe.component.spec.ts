@@ -7,6 +7,7 @@ describe('AddEquipeComponent', () => {
   let fixture: ComponentFixture<AddEquipeComponent>;
 
   beforeEach(() => {
+
     TestBed.configureTestingModule({
       declarations: [AddEquipeComponent]
     });

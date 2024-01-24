@@ -29,6 +29,7 @@ export class AddEquipeComponent {
     addPlayer(): void {
     this.players.push(this.fb.group({
       playerName: [''],
+
       playerPosition: ['']
     }));
   }
