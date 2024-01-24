@@ -37,3 +37,5 @@ import { VoirMatchComponent } from './Tables/voir-match/voir-match.component';
    VoirEquipeComponent]
 })
 export class AdminLayoutModule { }
+
+
