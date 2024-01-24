@@ -33,6 +33,18 @@ const routes: Routes = [
 
 
 
+  {
+    path: 'admin',
+    component: AdminLayoutComponent,
+    children: [
+      { path: 'dashboard', component: AdminnavComponent },
+      { path: 'Clients', component: AddClientComponent },
+      { path: 'addEquipe', component: AddEquipeComponent },
+      { path: 'AddMatches', component: AddMatchComponent },
+      // ... other admin panel routes
+    ]
+    },
+
 
   {
         path: 'recom',
